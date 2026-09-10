@@ -1,4 +1,9 @@
 _build/
 target/
 .mooncakes/
-.repos/
+__pycache__/
+evidence/benchmark.json
+evidence/robustness.json
+evidence/coverage*
+evidence/current-validation.json
+evidence/validation-console.txt

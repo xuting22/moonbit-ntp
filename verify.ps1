@@ -2,18 +2,20 @@ param([string]$MoonPath)
 $ErrorActionPreference='Stop'
 if (-not $MoonPath) {
   $available=Get-Command moon -ErrorAction SilentlyContinue
-  $localTool=Join-Path $PSScriptRoot '../../../work/moon/bin/moon.exe'
   if ($available) { $MoonPath=$available.Source }
-  elseif (Test-Path -LiteralPath $localTool) { $MoonPath=(Resolve-Path -LiteralPath $localTool).Path }
   else { throw 'Install MoonBit or pass -MoonPath with the absolute moon.exe path.' }
 }
 $env:MOON_HOME=Split-Path (Split-Path $MoonPath -Parent) -Parent
 $env:PATH="$(Split-Path $MoonPath -Parent);$env:PATH"
 Push-Location $PSScriptRoot
 try {
+  & $MoonPath fmt
+  if ($LASTEXITCODE -ne 0) {throw 'format failed'}
+  & $MoonPath info
+  if ($LASTEXITCODE -ne 0) {throw 'API generation failed'}
   & $MoonPath check --deny-warn
   if ($LASTEXITCODE -ne 0) {throw 'check failed'}
-  & $MoonPath test --deny-warn
+  & $MoonPath test --target wasm-gc --deny-warn
   if ($LASTEXITCODE -ne 0) {throw 'tests failed'}
   & $MoonPath test --target js --deny-warn
   if ($LASTEXITCODE -ne 0) {throw 'JS tests failed'}
@@ -26,4 +28,10 @@ try {
   Copy-Item -LiteralPath $engine.FullName -Destination 'web/engine.mjs' -Force
   node tools/test-demo.mjs
   if ($LASTEXITCODE -ne 0) {throw 'browser engine test failed'}
+  node tools/test-cli.mjs
+  if ($LASTEXITCODE -ne 0) {throw 'CLI test failed'}
+  node tools/robustness.mjs
+  if ($LASTEXITCODE -ne 0) {throw 'robustness failed'}
+  node tools/benchmark.mjs
+  if ($LASTEXITCODE -ne 0) {throw 'benchmark failed'}
 } finally {Pop-Location}

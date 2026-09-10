@@ -10,6 +10,8 @@ pub fn decode(Bytes) -> Packet raise NtpError
 
 pub fn from_unix(Double) -> (Timestamp, Int) raise NtpError
 
+pub fn lowest_delay(Array[Sample]) -> Sample?
+
 pub fn measure(Timestamp, Packet, Timestamp) -> Sample raise NtpError
 
 pub fn request(Timestamp) -> Packet

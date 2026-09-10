@@ -1,17 +1,33 @@
-name: MoonBit checks
+name: MoonBit quality checks
 on: [push, pull_request]
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
       - name: Install MoonBit
         run: |
           curl -fsSL https://cli.moonbitlang.com/install/unix.sh | bash
           echo "$HOME/.moon/bin" >> "$GITHUB_PATH"
       - run: moon version --all
-      - run: moon check --deny-warn
-      - run: moon build --deny-warn
-      - run: moon test --deny-warn
-      - run: moon test --target js --deny-warn
       - run: moon fmt && moon info && git diff --exit-code
+      - run: moon check --deny-warn
+      - run: moon test --target wasm-gc --deny-warn
+      - run: moon test --target js --deny-warn
+      - run: moon build --target js --deny-warn
+      - name: Refresh actual browser engine
+        run: |
+          engine=$(find _build/js/debug/build/cmd/web -type f -name '*.js' | head -n 1)
+          test -n "$engine"
+          cp "$engine" web/engine.mjs
+      - run: node tools/test-demo.mjs
+      - run: node tools/test-cli.mjs
+      - run: node tools/robustness.mjs
+      - run: node tools/benchmark.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: quality-evidence
+          path: evidence/

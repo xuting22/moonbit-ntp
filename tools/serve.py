@@ -11,6 +11,18 @@ class Handler(SimpleHTTPRequestHandler):
                       '.json': 'application/json', '.md': 'text/plain; charset=utf-8',
                       '.mbt': 'text/plain; charset=utf-8', '.mbti': 'text/plain; charset=utf-8'}
 
+    def send_head(self):
+        path = Path(self.translate_path(self.path))
+        root = Path(self.directory).resolve()
+        if any(part in {'.git', '_build', 'target', '.mooncakes'} for part in path.parts) or not path.resolve().is_relative_to(root):
+            self.send_error(404)
+            return None
+        return super().send_head()
+
+    def list_directory(self, path):
+        self.send_error(404)
+        return None
+
     def end_headers(self):
         self.send_header('Cache-Control', 'no-store')
         super().end_headers()
