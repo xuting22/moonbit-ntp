@@ -282,6 +282,13 @@ function _M0DTPC16result6ResultGzRPC15error5ErrorE2Ok(param0) {
   this._0 = param0;
 }
 _M0DTPC16result6ResultGzRPC15error5ErrorE2Ok.prototype.$tag = 1;
+function _M0DTPC16option6OptionGdE4None() {}
+_M0DTPC16option6OptionGdE4None.prototype.$tag = 0;
+const _M0DTPC16option6OptionGdE4None__ = new _M0DTPC16option6OptionGdE4None();
+function _M0DTPC16option6OptionGdE4Some(param0) {
+  this._0 = param0;
+}
+_M0DTPC16option6OptionGdE4Some.prototype.$tag = 1;
 const _M0FP092moonbitlang_2fcore_2fbuiltin_2fStringBuilder_24as_24_40moonbitlang_2fcore_2fbuiltin_2eLogger = { method_0: _M0IPB13StringBuilderPB6Logger13write__string, method_1: _M0IP016_24default__implPB6Logger16write__substringGRPB13StringBuilderE, method_2: _M0IPB13StringBuilderPB6Logger11write__view, method_3: _M0IPB13StringBuilderPB6Logger11write__char, method_4: _M0IP016_24default__implPB6Logger28write__string__interpolationGRPB13StringBuilderE, method_5: _M0IP016_24default__implPB6Logger5writeGRPB13StringBuilderE };
 function _M0FP15Error8to__repr(_e) {
   if (_e.$tag === 1) {
@@ -3552,7 +3559,7 @@ function _M0FP411localreview3ntp3cmd3web14query__request(unix_seconds) {
   const e = _try_err;
   return `ERROR: ${_M0IP016_24default__implPB4Show10to__stringGRPC15debug4ReprE(_M0MPC15debug4Repr4ReprGRP211localreview3ntp8NtpErrorE(e))}`;
 }
-function _M0FP411localreview3ntp3cmd3web15query__response(sent_hex, received_unix, reply_hex) {
+function _M0FP411localreview3ntp3cmd3web13query__result(sent_hex, received_unix, reply_hex, local_sent) {
   let _try_err;
   _L: {
     const _bind = _M0FP411localreview3ntp3cmd3web5unhex(sent_hex);
@@ -3629,7 +3636,34 @@ function _M0FP411localreview3ntp3cmd3web15query__response(sent_hex, received_uni
       arrived = _arrived;
       break _L$2;
     }
-    const _bind$5 = _M0FP211localreview3ntp7measure(sent, reply, arrived);
+    let actual_sent;
+    let value;
+    _L$3: {
+      _L$4: {
+        if (local_sent.$tag === 1) {
+          const _Some = local_sent;
+          const _value = _Some._0;
+          value = _value;
+          break _L$4;
+        } else {
+          actual_sent = sent;
+        }
+        break _L$3;
+      }
+      const _bind$5 = _M0FP211localreview3ntp10from__unix(value);
+      let _tmp$4;
+      if (_bind$5.$tag === 1) {
+        const _ok = _bind$5;
+        _tmp$4 = _ok._0;
+      } else {
+        const _err = _bind$5;
+        _try_err = _err._0;
+        break _L;
+      }
+      actual_sent = _tmp$4._0;
+    }
+    const timed_reply = new _M0TP211localreview3ntp6Packet(reply.leap, reply.version, reply.mode, reply.stratum, reply.poll, reply.precision, reply.root_delay, reply.root_dispersion, reply.reference_id, reply.reference, actual_sent, reply.receive, reply.transmit);
+    const _bind$5 = _M0FP211localreview3ntp7measure(actual_sent, timed_reply, arrived);
     let sample;
     if (_bind$5.$tag === 1) {
       const _ok = _bind$5;
@@ -3654,7 +3688,13 @@ function _M0FP411localreview3ntp3cmd3web15query__response(sent_hex, received_uni
   const e = _try_err;
   return `ERROR: ${_M0IP016_24default__implPB4Show10to__stringGRPC15debug4ReprE(_M0MPC15debug4Repr4ReprGRPC15error5ErrorE(e))}`;
 }
+function _M0FP411localreview3ntp3cmd3web15query__response(sent_hex, received_unix, reply_hex) {
+  return _M0FP411localreview3ntp3cmd3web13query__result(sent_hex, received_unix, reply_hex, _M0DTPC16option6OptionGdE4None__);
+}
+function _M0FP411localreview3ntp3cmd3web19query__response__at(sent_hex, sent_unix, received_unix, reply_hex) {
+  return _M0FP411localreview3ntp3cmd3web13query__result(sent_hex, received_unix, reply_hex, new _M0DTPC16option6OptionGdE4Some(sent_unix));
+}
 (() => {
 })();
-export { _M0FP411localreview3ntp3cmd3web3run as run, _M0FP411localreview3ntp3cmd3web14query__request as query_request, _M0FP411localreview3ntp3cmd3web15query__response as query_response }
+export { _M0FP411localreview3ntp3cmd3web3run as run, _M0FP411localreview3ntp3cmd3web14query__request as query_request, _M0FP411localreview3ntp3cmd3web15query__response as query_response, _M0FP411localreview3ntp3cmd3web19query__response__at as query_response_at }
 //# sourceMappingURL=web.js.map

@@ -71,10 +71,11 @@ pub fn query_request(unix_seconds : Double) -> String {
 }
 
 ///|
-pub fn query_response(
+fn query_result(
   sent_hex : String,
   received_unix : Double,
   reply_hex : String,
+  local_sent : Double?,
 ) -> String {
   try {
     let sent = @lib.decode(unhex(sent_hex)).transmit
@@ -92,7 +93,12 @@ pub fn query_response(
       )
     }
     let (arrived, _) = @lib.from_unix(received_unix)
-    let sample = @lib.measure(sent, reply, arrived)
+    let actual_sent = match local_sent {
+      Some(value) => @lib.from_unix(value).0
+      None => sent
+    }
+    let timed_reply = { ..reply, origin: actual_sent, }
+    let sample = @lib.measure(actual_sent, timed_reply, arrived)
     reply.validate_health()
     let server_time = received_unix + reply.transmit.difference(arrived)
     "{\"offsetSeconds\":" +
@@ -115,4 +121,23 @@ pub fn query_response(
   } catch {
     e => "ERROR: " + Repr(e).to_string()
   }
+}
+
+///|
+pub fn query_response(
+  sent_hex : String,
+  received_unix : Double,
+  reply_hex : String,
+) -> String {
+  query_result(sent_hex, received_unix, reply_hex, None)
+}
+
+///|
+pub fn query_response_at(
+  sent_hex : String,
+  sent_unix : Double,
+  received_unix : Double,
+  reply_hex : String,
+) -> String {
+  query_result(sent_hex, received_unix, reply_hex, Some(sent_unix))
 }

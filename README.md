@@ -88,3 +88,8 @@ console.log(sample.offsetSeconds, sample.delaySeconds);
 开发更新：`Packet::validate_health()` 检查参考时间非零、不得晚于发送时间、年龄不超过 131072 秒，以及根延迟的一半加根离散度不超过 16 秒。`root_distance(sample)` 返回单样本总同步距离。UDP 查询现在执行这些检查，并返回 `rootDistanceSeconds`。阈值依据 [beevik/ntp Validate](https://github.com/beevik/ntp/blob/main/ntp.go)；这里按公开行为重新实现，没有复制源代码。尚不包括认证有效性、多样本抖动、系统时钟驯服或全部上游查询选项。
 
 本次仅运行新增 health limits 测试组（4 类错误及 1 个独立数值结果），通过；旧测试未重复运行，未重新打包。
+
+
+查询更新：发送时间字段使用 64 位密码学随机值作响应匹配，真实本地发送时间不放到线路上；先核对服务器原样回显，再用本地时间计算偏移和延迟。`query` 新增 `version:3|4`、`localAddress`、`localPort`、`ttl`（IPv4，1–255）选项。地址族不符或无效选项会拒绝。相同本地时刻的重复请求也生成不同随机值；这不是 MAC/NTS 身份认证，不能替代它们。
+
+本轮仅通过新增 nonce/source/version 测试组，覆盖两次独立匹配和时间计算、错误 origin 与无效选项。未重跑其他组或重打包。

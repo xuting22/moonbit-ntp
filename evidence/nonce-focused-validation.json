@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-09-10T12:40:41.614481+00:00",
+  "build": "JS --deny-warn passed",
+  "test_filter": "nonce separates",
+  "groups_passed": 1,
+  "scope": [
+    "64-bit nonce uniqueness with fixed wall clock",
+    "offset and delay independent of wire nonce",
+    "local IPv4 binding options and TTL accepted",
+    "version 3 on wire",
+    "origin mismatch rejection",
+    "invalid options rejected"
+  ],
+  "not_verified": [
+    "packet-level TTL capture",
+    "full test suite rerun",
+    "NTS or MAC authentication"
+  ],
+  "archive_refreshed": false
+}

@@ -29,3 +29,14 @@ await test('UDP health limits include stale future and missing reference and exc
  const port=await server(t,b=>{b.writeInt32BE(2*65536,4);b.writeUInt32BE(3*65536,8)});
  const result=await query('127.0.0.1',options(port));assert.ok(Math.abs(result.rootDistanceSeconds-4.2)<.000001);
 });
+await test('UDP nonce separates origin matching from clock and supports source bind and version',async t=>{
+ const seen=[];const source=dgram.createSocket('udp4');source.bind(0,'127.0.0.1');await once(source,'listening');const localPort=source.address().port;await new Promise(resolve=>source.close(resolve));
+ const port=await server(t,(reply,req)=>{seen.push(req.subarray(40).toString('hex'));assert.equal((req[0]>>3)&7,3)});
+ for(let i=0;i<2;i++){
+  const result=await query('127.0.0.1',{...options(port),localAddress:'127.0.0.1',localPort,ttl:1,version:3});
+  assert.ok(Math.abs(result.offsetSeconds)<.000001);assert.ok(Math.abs(result.delaySeconds-.4)<.000001);
+ }
+ assert.notEqual(seen[0],seen[1]);
+ const mismatch=await server(t,reply=>{reply[30]^=1});await assert.rejects(query('127.0.0.1',options(mismatch)),/origin mismatch/);
+ for(const bad of [{ttl:0},{ttl:256},{localAddress:'::1'},{localPort:-1},{version:2},{signal:{}}])await assert.rejects(query('127.0.0.1',{...options(port),...bad}),/options/);
+});

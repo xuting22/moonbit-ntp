@@ -9,7 +9,12 @@ pkgtype(kind: "executable")
 options(
   link: {
     "js": {
-      "exports": [ "run", "query_request", "query_response" ],
+      "exports": [
+        "run",
+        "query_request",
+        "query_response",
+        "query_response_at",
+      ],
       "format": "esm",
     },
   },
