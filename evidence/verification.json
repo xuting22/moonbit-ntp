@@ -1,0 +1,49 @@
+{
+  "project": "ntp",
+  "checks": [
+    {
+      "command": "moon fmt",
+      "exit_code": 0,
+      "output": "Finished. moon: ran 9 tasks, now up to date\n",
+      "utc": "2026-09-09T18:52:52.239095+00:00"
+    },
+    {
+      "command": "moon info",
+      "exit_code": 0,
+      "output": "Finished. moon: ran 2 tasks, now up to date\n",
+      "utc": "2026-09-09T18:52:52.418668+00:00"
+    },
+    {
+      "command": "moon check --deny-warn",
+      "exit_code": 0,
+      "output": "Finished. moon: ran 2 tasks, now up to date\n",
+      "utc": "2026-09-09T18:52:52.776889+00:00"
+    },
+    {
+      "command": "moon test --deny-warn",
+      "exit_code": 0,
+      "output": "Total tests: 4, passed: 4, failed: 0.\n",
+      "utc": "2026-09-09T18:52:53.186449+00:00"
+    },
+    {
+      "command": "moon test --target js --deny-warn",
+      "exit_code": 0,
+      "output": "Total tests: 4, passed: 4, failed: 0.\n",
+      "utc": "2026-09-09T18:52:53.387635+00:00"
+    },
+    {
+      "command": "moon build --target js --deny-warn",
+      "exit_code": 0,
+      "output": "Finished. moon: no work to do\n",
+      "utc": "2026-09-09T18:52:53.696305+00:00"
+    },
+    {
+      "command": "moon run cmd/main",
+      "exit_code": 0,
+      "output": "NTP request bytes: 48, era: 0\nRecovered Unix seconds: 1788998400.25\n",
+      "utc": "2026-09-09T18:52:53.835690+00:00"
+    }
+  ],
+  "demo": "NTP request bytes: 48, era: 0\nRecovered Unix seconds: 1788998400.25",
+  "source_lines": 283
+}

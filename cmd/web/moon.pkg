@@ -1,0 +1,11 @@
+import {
+  "localreview/ntp" @lib,
+}
+
+supported_targets = "js"
+
+pkgtype(kind: "executable")
+
+options(
+  link: { "js": { "exports": [ "run" ], "format": "esm" } },
+)

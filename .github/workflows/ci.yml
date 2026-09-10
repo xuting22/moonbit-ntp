@@ -1,0 +1,17 @@
+name: MoonBit checks
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install MoonBit
+        run: |
+          curl -fsSL https://cli.moonbitlang.com/install/unix.sh | bash
+          echo "$HOME/.moon/bin" >> "$GITHUB_PATH"
+      - run: moon version --all
+      - run: moon check --deny-warn
+      - run: moon build --deny-warn
+      - run: moon test --deny-warn
+      - run: moon test --target js --deny-warn
+      - run: moon fmt && moon info && git diff --exit-code

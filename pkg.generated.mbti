@@ -1,0 +1,55 @@
+// Generated using `moon info`, DON'T EDIT IT
+package "localreview/ntp"
+
+import {
+  "moonbitlang/core/debug",
+}
+
+// Values
+pub fn decode(Bytes) -> Packet raise NtpError
+
+pub fn from_unix(Double) -> (Timestamp, Int) raise NtpError
+
+pub fn measure(Timestamp, Packet, Timestamp) -> Sample raise NtpError
+
+pub fn request(Timestamp) -> Packet
+
+// Errors
+pub suberror NtpError {
+  Invalid(String)
+} derive(@debug.Debug)
+
+// Types and methods
+pub(all) struct Packet {
+  leap : Int
+  version : Int
+  mode : Int
+  stratum : Int
+  poll : Int
+  precision : Int
+  root_delay : Int
+  root_dispersion : UInt
+  reference_id : UInt
+  reference : Timestamp
+  origin : Timestamp
+  receive : Timestamp
+  transmit : Timestamp
+} derive(Eq, @debug.Debug)
+pub fn Packet::encode(Self) -> Bytes raise NtpError
+
+pub struct Sample {
+  offset_seconds : Double
+  delay_seconds : Double
+} derive(@debug.Debug)
+
+pub(all) struct Timestamp {
+  seconds : UInt
+  fraction : UInt
+} derive(Eq, @debug.Debug)
+pub fn Timestamp::difference(Self, Self) -> Double
+pub fn Timestamp::unix_seconds(Self, Int) -> Double raise NtpError
+pub fn Timestamp::zero() -> Self
+
+// Type aliases
+
+// Traits
