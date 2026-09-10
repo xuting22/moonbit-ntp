@@ -38,6 +38,7 @@ pub(all) struct Packet {
   transmit : Timestamp
 } derive(Eq, @debug.Debug)
 pub fn Packet::encode(Self) -> Bytes raise NtpError
+pub fn Packet::kiss_code(Self) -> String?
 
 pub struct Sample {
   offset_seconds : Double

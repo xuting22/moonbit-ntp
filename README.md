@@ -68,3 +68,18 @@ node tools/cli.mjs --file sample.txt --json
 单阶段选择器，不是完整 RFC 时钟过滤算法；没有 UDP 和系统校时。
 
 [可执行 API 示例](README.mbt.md)会随测试运行；[功能边界](FEATURES.md)和[测试说明](TESTING.md)用于独立审查。网页与 CLI 展示示例入口，新 API 的完整使用见可执行示例。
+
+
+## 0.3.0 本地开发更新：UDP 查询
+
+新增 `tools/udp-client.mjs`，Node 24 宿主调用真实 MoonBit 请求编解码和四时间戳计算。支持 IPv4/IPv6、端口、截止时间和 AbortSignal。连接式 UDP 只接收所选端点；核对 origin，识别 RATE 等拒绝码，拒绝未同步、错误模式和缺失时间戳。接收时间使用发送时墙钟加单调时钟间隔，避免查询途中系统时间跳变。
+
+```js
+import {query} from './tools/udp-client.mjs';
+const sample = await query('your-ntp-server.example', {timeoutMs:3000});
+console.log(sample.offsetSeconds, sample.delaySeconds);
+```
+
+返回时间偏移、往返延迟、发送时间、层级、闰秒标志及根延迟/离散度。不会调整操作系统时钟，不自动重试。当前只接受 48 字节基础报文；尚无 MAC/NTS、扩展字段、完整时钟过滤、根距离/参考时间的完整健康判定和独立 NTP daemon 互操作证明。
+
+本轮只运行 `node tools/test-udp.mjs` 的 4 组本机 UDP 验证；未重跑双后端全套、性能、覆盖率或其他 19 仓库。原审查 ZIP/bundle 仍是前一打包版本，最新实现以本目录 Git 提交为准。

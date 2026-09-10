@@ -34,4 +34,6 @@ try {
   if ($LASTEXITCODE -ne 0) {throw 'robustness failed'}
   node tools/benchmark.mjs
   if ($LASTEXITCODE -ne 0) {throw 'benchmark failed'}
+  node tools/test-udp.mjs
+  if ($LASTEXITCODE -ne 0) {throw 'UDP checks failed'}
 } finally {Pop-Location}

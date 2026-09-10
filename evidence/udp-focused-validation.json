@@ -1,0 +1,16 @@
+{
+  "version": "0.3.0",
+  "timestamp": "2026-09-10T12:35:43.619326+00:00",
+  "build": "JS --deny-warn passed",
+  "test_groups": 4,
+  "passed": 4,
+  "scope": "IPv4/IPv6 loopback UDP, independent wire fixture and expected arithmetic, malformed replies, timeout and cancellation",
+  "not_run": [
+    "full backend suites",
+    "benchmarks",
+    "coverage",
+    "third-party daemon",
+    "portable archive checks"
+  ],
+  "packages": "previous packaged release, not refreshed by user preference"
+}

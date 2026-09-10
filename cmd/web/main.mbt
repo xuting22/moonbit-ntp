@@ -59,3 +59,57 @@ fn hex(data : Bytes) -> String {
   }
   out.join("")
 }
+
+///|
+pub fn query_request(unix_seconds : Double) -> String {
+  try {
+    let (stamp, _) = @lib.from_unix(unix_seconds)
+    hex(@lib.request(stamp).encode())
+  } catch {
+    e => "ERROR: " + Repr(e).to_string()
+  }
+}
+
+///|
+pub fn query_response(
+  sent_hex : String,
+  received_unix : Double,
+  reply_hex : String,
+) -> String {
+  try {
+    let sent = @lib.decode(unhex(sent_hex)).transmit
+    let reply = @lib.decode(unhex(reply_hex))
+    if reply.origin != sent {
+      raise Failure("origin mismatch")
+    }
+    if reply.stratum == 0 {
+      raise Failure(
+        "Kiss-of-death: " +
+        (match reply.kiss_code() {
+          Some(c) => c
+          None => "unknown"
+        }),
+      )
+    }
+    let (arrived, _) = @lib.from_unix(received_unix)
+    let sample = @lib.measure(sent, reply, arrived)
+    let server_time = received_unix + reply.transmit.difference(arrived)
+    "{\"offsetSeconds\":" +
+    sample.offset_seconds.to_string() +
+    ",\"delaySeconds\":" +
+    sample.delay_seconds.to_string() +
+    ",\"serverTransmitUnix\":" +
+    server_time.to_string() +
+    ",\"stratum\":" +
+    reply.stratum.to_string() +
+    ",\"leap\":" +
+    reply.leap.to_string() +
+    ",\"rootDelaySeconds\":" +
+    (reply.root_delay.to_double() / 65536.0).to_string() +
+    ",\"rootDispersionSeconds\":" +
+    (reply.root_dispersion.to_double() / 65536.0).to_string() +
+    "}"
+  } catch {
+    e => "ERROR: " + Repr(e).to_string()
+  }
+}
