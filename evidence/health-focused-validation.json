@@ -1,0 +1,10 @@
+{
+  "timestamp": "2026-09-10T12:37:56.025168+00:00",
+  "build": "JS --deny-warn passed",
+  "test_filter": "health limits",
+  "groups_passed": 1,
+  "cases": 5,
+  "scope": "new health rejection and root distance arithmetic through real loopback UDP",
+  "full_suite_rerun": false,
+  "archive_refreshed": false
+}

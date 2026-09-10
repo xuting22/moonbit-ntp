@@ -80,6 +80,11 @@ const sample = await query('your-ntp-server.example', {timeoutMs:3000});
 console.log(sample.offsetSeconds, sample.delaySeconds);
 ```
 
-返回时间偏移、往返延迟、发送时间、层级、闰秒标志及根延迟/离散度。不会调整操作系统时钟，不自动重试。当前只接受 48 字节基础报文；尚无 MAC/NTS、扩展字段、完整时钟过滤、根距离/参考时间的完整健康判定和独立 NTP daemon 互操作证明。
+返回时间偏移、往返延迟、发送时间、层级、闰秒标志及根延迟/离散度。不会调整操作系统时钟，不自动重试。当前只接受 48 字节基础报文；尚无 MAC/NTS、扩展字段、完整时钟过滤和独立 NTP daemon 互操作证明。
 
 本轮只运行 `node tools/test-udp.mjs` 的 4 组本机 UDP 验证；未重跑双后端全套、性能、覆盖率或其他 19 仓库。原审查 ZIP/bundle 仍是前一打包版本，最新实现以本目录 Git 提交为准。
+
+
+开发更新：`Packet::validate_health()` 检查参考时间非零、不得晚于发送时间、年龄不超过 131072 秒，以及根延迟的一半加根离散度不超过 16 秒。`root_distance(sample)` 返回单样本总同步距离。UDP 查询现在执行这些检查，并返回 `rootDistanceSeconds`。阈值依据 [beevik/ntp Validate](https://github.com/beevik/ntp/blob/main/ntp.go)；这里按公开行为重新实现，没有复制源代码。尚不包括认证有效性、多样本抖动、系统时钟驯服或全部上游查询选项。
+
+本次仅运行新增 health limits 测试组（4 类错误及 1 个独立数值结果），通过；旧测试未重复运行，未重新打包。

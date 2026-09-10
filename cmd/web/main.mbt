@@ -93,6 +93,7 @@ pub fn query_response(
     }
     let (arrived, _) = @lib.from_unix(received_unix)
     let sample = @lib.measure(sent, reply, arrived)
+    reply.validate_health()
     let server_time = received_unix + reply.transmit.difference(arrived)
     "{\"offsetSeconds\":" +
     sample.offset_seconds.to_string() +
@@ -100,6 +101,8 @@ pub fn query_response(
     sample.delay_seconds.to_string() +
     ",\"serverTransmitUnix\":" +
     server_time.to_string() +
+    ",\"rootDistanceSeconds\":" +
+    reply.root_distance(sample).to_string() +
     ",\"stratum\":" +
     reply.stratum.to_string() +
     ",\"leap\":" +

@@ -39,6 +39,8 @@ pub(all) struct Packet {
 } derive(Eq, @debug.Debug)
 pub fn Packet::encode(Self) -> Bytes raise NtpError
 pub fn Packet::kiss_code(Self) -> String?
+pub fn Packet::root_distance(Self, Sample) -> Double
+pub fn Packet::validate_health(Self) -> Unit raise NtpError
 
 pub struct Sample {
   offset_seconds : Double
