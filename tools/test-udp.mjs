@@ -38,5 +38,5 @@ await test('UDP nonce separates origin matching from clock and supports source b
  }
  assert.notEqual(seen[0],seen[1]);
  const mismatch=await server(t,reply=>{reply[30]^=1});await assert.rejects(query('127.0.0.1',options(mismatch)),/origin mismatch/);
- for(const bad of [{ttl:0},{ttl:256},{localAddress:'::1'},{localPort:-1},{version:2},{signal:{}}])await assert.rejects(query('127.0.0.1',{...options(port),...bad}),/options/);
+ for(const bad of [{ttl:0},{ttl:256},{localAddress:'::1'},{localPort:-1},{version:1},{signal:{}}])await assert.rejects(query('127.0.0.1',{...options(port),...bad}),/options/);
 });

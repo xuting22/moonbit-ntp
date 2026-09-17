@@ -1,0 +1,8 @@
+{
+  "project": "ntp",
+  "seed": 20260910,
+  "cases": 307,
+  "expected_error_responses": 306,
+  "uncaught_exceptions": 0,
+  "scope": "bounded malformed-input robustness, not proof of full language/protocol conformance"
+}

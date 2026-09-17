@@ -26,6 +26,11 @@ jobs:
       - run: node tools/test-demo.mjs
       - run: node tools/test-cli.mjs
       - run: node tools/test-udp.mjs
+      - run: node tools/compare-reference.mjs --replay
+      - run: node tools/test-sync.mjs
+      - run: node tools/test-http.mjs
+      - run: node tools/protocol-robustness.mjs
+      - run: node tools/benchmark-sync.mjs
       - run: node tools/robustness.mjs
       - run: node tools/benchmark.mjs
       - uses: actions/upload-artifact@v4

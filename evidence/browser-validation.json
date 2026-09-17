@@ -1,0 +1,36 @@
+{
+  "browser": "Codex In-app Browser",
+  "passed": 12,
+  "groups": [
+    "Actual browser query to independent Chrony 4.8 reports v4 / stratum 10",
+    "Eight real Chrony sampling rounds produce a filtered estimate",
+    "Stop during 64-second poll wait returns controls and preserves received data",
+    "Query succeeds after cancellation",
+    "AES128 key-file query to Chrony reports authenticated, then clear key works",
+    "Downloaded JSON parsed from disk: one authenticated result, no test key",
+    "Worker synthetic demo labels data and selects three of four sources",
+    "Worker decodes valid packet into structured metadata",
+    "Invalid hex shows error, later valid decode succeeds",
+    "390 x 844 viewport: page width 375, table content 309, no horizontal page overflow",
+    "Browser warning/error logs empty",
+    "Final engine reload and restarted host: eight real rounds and valid Worker decode pass"
+  ],
+  "finalEngineSHA256": "9874050f5f2a5581aa38bc25fe38eb5d55ce551191e78a615d7c1c142fa315cd",
+  "exportSHA256": "3859f63da735611fb897a09517c55e7fae0590cc913803015b31d9474ba25b68",
+  "exportBytes": 2912,
+  "downloadNote": "Browser download event hook timed out; actual Downloads file was found and independently parsed/hash-checked. This record does not treat the hook as success.",
+  "executionNote": "Initial UI checks preceded final formatting/rebuild; final restarted-host smoke checked real eight-round sampling and Worker decoding again. No algorithm change after those checks.",
+  "cleanup": {
+    "temporaryTabClosed": true,
+    "viewportReset": true,
+    "ownedHttpPidStopped": 12820,
+    "ownedChronyPidStopped": 12310,
+    "udp43123Closed": true,
+    "tcp8775Closed": true,
+    "existingSystemChronyUntouched": [
+      201,
+      268,
+      284
+    ]
+  }
+}

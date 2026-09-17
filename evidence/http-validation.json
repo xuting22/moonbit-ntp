@@ -1,0 +1,11 @@
+{
+  "runtime": "v24.11.0",
+  "passed": 5,
+  "groups": [
+    "Static whitelist, MIME/CSP and origin/Host checks",
+    "Real HTTP to UDP query and eight streamed filter rounds",
+    "Body, schema, round, destination-count and timeout limits",
+    "Disconnect during poll wait stops job and restores filter capacity",
+    "Four pending queries saturate slots; abort releases all slots"
+  ]
+}

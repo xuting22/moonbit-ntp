@@ -1,0 +1,8 @@
+{
+  "seed": 59057822,
+  "cases": 1062,
+  "accepted": 2,
+  "rejected": 1060,
+  "uncaught": 0,
+  "scope": "Bounded protocol/parser mutation and extension framing checks, not a conformance proof."
+}

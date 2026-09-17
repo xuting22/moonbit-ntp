@@ -1,3 +1,42 @@
-<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MoonBit 独立项目审查</title><style>
-:root{color-scheme:dark}body{background:#10151c;color:#e9eff4;font:15px/1.7 system-ui,"Microsoft YaHei";max-width:1000px;margin:40px auto;padding:0 24px}h1{font-weight:550;font-size:30px}header{color:#d2ed8b;font-size:12px;letter-spacing:2px}p{color:#a8b6c5}section{background:#171e27;border:1px solid #303d4b;border-radius:12px;padding:24px;margin:24px 0}textarea,pre{width:100%;box-sizing:border-box;background:#0d131b;color:#e2eadb;border:1px solid #33424f;border-radius:7px;padding:16px;font:14px/1.6 Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere}textarea{min-height:150px;resize:vertical}pre{min-height:100px}button{background:#d2ed8b;color:#142017;border:0;border-radius:6px;padding:10px 20px;cursor:pointer;margin:12px 10px 0 0}a{color:#8fc7b7;margin-right:20px}small{color:#9dacbd}.error{color:#ffa59e}#tiles{display:grid;grid-template-columns:repeat(16,1fr);gap:3px;max-width:600px;margin:18px 0}#tiles[hidden]{display:none}#tiles span{height:18px;border-radius:2px}
-</style><header>MOONBIT · 独立分装 · 仅本地</header><h1 id="title"></h1><p id="scope"></p><small id="limits"></small><section><label for="input">输入</label><textarea id="input" spellcheck="false"></textarea><button id="run">运行实际 MoonBit 代码</button><button id="reset">恢复示例</button><p id="status"></p><div id="tiles" hidden></div><pre id="output"></pre></section><a href="../README.md">使用说明</a><a href="../pkg.generated.mbti">公共 API</a><a href="../DUPLICATION.md">查重记录</a><script type="module" src="app.mjs"></script></html>
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NTP · 时间观测台</title><link rel="stylesheet" href="./style.css"></head>
+<body>
+<header class="masthead"><a class="brand" href="./">◷ <span>时间观测台</span></a><span class="badge">MOONBIT NTP / 0.4</span><span id="host-state">正在连接本地服务</span></header>
+<main>
+<section class="intro"><p class="eyebrow">LOCAL CLOCK OBSERVATORY</p><h1>把时间偏差，看清楚。</h1><p>查询时间源，观察往返延迟与八级过滤结果，再比较多个来源的共识。</p><p class="quiet">仅计算估计值，不调整系统时钟。浏览器通过本地 Node 服务发送 UDP。</p></section>
+<div class="workspace">
+<section class="panel controls" aria-labelledby="source-heading">
+<div class="section-head"><h2 id="source-heading">时间源</h2><span>01 / 配置</span></div>
+<label for="servers">服务器地址 · 每行一个，最多 8 个</label>
+<textarea id="servers" rows="4" spellcheck="false" placeholder="127.0.0.1:43123"></textarea>
+<p class="hint">支持域名、IPv4 与 [IPv6]:端口。只有点击查询或采样才会发送请求。</p>
+<div class="fields"><label for="rounds">采样轮数<input id="rounds" type="number" min="1" max="32" value="8"></label><label for="interval">间隔 / 毫秒<input id="interval" type="number" min="0" max="64000" value="64000"></label><label for="minimum">最少一致来源<input id="minimum" type="number" min="1" max="8" value="1"></label><label for="version">协议版本<select id="version"><option>4</option><option>3</option><option>2</option></select></label></div>
+<details><summary>认证与轮询选项</summary>
+<label class="check"><input id="fast" type="checkbox">忽略服务器公布的轮询间隔</label>
+<p class="hint">仅在获准的测试服务上使用。RATE 退避仍然生效。</p>
+<label for="auth">认证配置文件（可选）</label><input id="auth" type="file" accept=".json,application/json">
+<p id="auth-state" class="hint">未设置认证；文件中的密钥只用于当前页面会话。</p>
+<button id="clear-auth" class="text-button">清除认证</button>
+</details>
+<div class="actions"><button id="query" class="secondary">单次查询</button><button id="sample" class="primary">开始采样 ↗</button><button id="cancel" class="secondary" disabled>停止</button></div>
+<button id="demo" class="text-button">查看离线示例 →</button>
+</section>
+<section class="panel observation" aria-labelledby="result-heading">
+<div class="section-head"><h2 id="result-heading">观测结果</h2><span id="mode-label">等待输入</span></div>
+<p id="status" role="status" aria-live="polite">输入时间源，或先查看离线示例。</p>
+<div class="metrics"><div><span>时钟偏差</span><strong id="offset">—</strong><small>毫秒 · 正值表示来源更快</small></div><div><span>往返延迟</span><strong id="delay">—</strong><small>毫秒 · 最低延迟样本</small></div><div><span>一致来源</span><strong id="survivors">—</strong><small id="round-label">尚未开始</small></div></div>
+<figure><figcaption><span>偏差走势 / ms</span><span class="legend">● 各来源估计</span></figcaption><canvas id="chart" role="img" aria-label="偏差随采样轮数变化，下方表格列出最新数值"></canvas><p id="chart-empty">开始观测后，曲线会显示在这里。</p></figure>
+<div class="table-scroll"><table><thead><tr><th>来源</th><th>偏差 / ms</th><th>延迟 / ms</th><th>不确定度 / ms</th><th>状态</th></tr></thead><tbody id="sources"><tr><td colspan="5">还没有观测数据</td></tr></tbody></table></div>
+<div class="result-footer"><p id="selection-note">过滤器需要积累样本，初始不确定度较大。</p><button id="download" class="secondary" disabled>导出 JSON</button></div>
+</section>
+</div>
+<section class="panel decoder"><div class="section-head"><h2>报文检视</h2><span>02 / 离线工具</span></div>
+<p class="hint">解析在浏览器 Worker 内运行的 MoonBit 核心完成。MAC 长度必须明确指定；这里只拆分字节，不验证认证。</p>
+<label for="packet">十六进制 NTP 报文</label><textarea id="packet" rows="3" spellcheck="false"></textarea>
+<div class="decode-actions"><label for="mac-length">MAC 字节数<select id="mac-length"><option>0</option><option>4</option><option>20</option><option>24</option></select></label><button id="decode" class="secondary">解析报文</button></div>
+<pre id="decoded" aria-live="polite">等待解析</pre></section>
+<footer><span>MoonBit 核心 · 本地可复核</span><nav><a href="/README.md">使用说明</a><a href="/HOST.md">认证与限制</a><a href="/pkg.generated.mbti">公共 API</a></nav></footer>
+</main><script type="module" src="./app.mjs"></script>
+</body></html>

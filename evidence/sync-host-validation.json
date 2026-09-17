@@ -1,0 +1,14 @@
+{
+  "runtime": "v24.11.0",
+  "passed": 8,
+  "groups": [
+    "Official Go MAC captures validate bytes, padding and key rejection",
+    "Actual UDP authenticates six algorithms and sends extension fields",
+    "Required MAC rejects missing authentication; malformed input fails before transport",
+    "Multi-source sampling warms eight stages and removes one false clock",
+    "Advertised polling and authenticated KoD backoff prevent repeated requests",
+    "Abort releases pending UDP queries and every core filter handle",
+    "Protocol rejects invalid MAC framing and malformed session requests",
+    "Real CLI query/auth-file/sample/decode and input failures"
+  ]
+}

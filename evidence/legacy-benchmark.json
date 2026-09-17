@@ -1,0 +1,14 @@
+{
+  "project": "ntp",
+  "utc": "2026-09-17T19:13:26.709Z",
+  "runtime": "v24.11.0",
+  "platform": "win32",
+  "cpu": "Intel(R) Core(TM) i7-14700HX",
+  "input_utf8_bytes": 143,
+  "samples": 30,
+  "warmup": 5,
+  "median_ms": 0.1495999999999995,
+  "p95_ms": 0.5611999999999995,
+  "max_ms": 0.8123000000000005,
+  "scope": "JS warm execution of documented example; no cross-project or upstream performance claim"
+}

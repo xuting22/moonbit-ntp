@@ -1,0 +1,59 @@
+{
+  "sources": [
+    {
+      "file": "beevik-v1.5.0.zip",
+      "url": "https://codeload.github.com/beevik/ntp/zip/refs/tags/v1.5.0",
+      "sha256": "1f0aa32fd4972f3305641499212cc3863ed8a2107b897ddd1d5a59866bd17c83"
+    },
+    {
+      "file": "rfc5905.txt",
+      "url": "https://www.rfc-editor.org/rfc/rfc5905.txt",
+      "sha256": "8b7abd903c60202e2953ee012fefa6916666c3b0c71825c748cdd262024fb268"
+    },
+    {
+      "file": "rfc7822.txt",
+      "url": "https://www.rfc-editor.org/rfc/rfc7822.txt",
+      "sha256": "0c0a7b2d6ef27fbd0f27cf25e5b88358e7e9d9614ea83dbf418acd7c3f361f6e"
+    },
+    {
+      "file": "rfc8573.txt",
+      "url": "https://www.rfc-editor.org/rfc/rfc8573.txt",
+      "sha256": "acb139faf1cc1af44a9e6eb6757d431b6a54cb5632d6822534c30e88ea1fbfe3"
+    }
+  ],
+  "dependencies": [
+    {
+      "url": "https://proxy.golang.org/golang.org/x/net/@v/v0.44.0.mod",
+      "sha256": "b64ec375b819035044e5091608f3ee4ad3ba7a7c2aa6e6e1ebe52b13675ab821"
+    },
+    {
+      "url": "https://proxy.golang.org/golang.org/x/net/@v/v0.44.0.info",
+      "sha256": "a94e5da86a15d6f5dcc28de3f91b9f7b9427010a8973d45670bbe367725c1961"
+    },
+    {
+      "url": "https://proxy.golang.org/golang.org/x/net/@v/v0.44.0.zip",
+      "sha256": "e45c82aff473f14b51b0e4b1ca25274364885af81ad3eb433c84c61aae7506cd"
+    },
+    {
+      "url": "https://proxy.golang.org/golang.org/x/sys/@v/v0.36.0.mod",
+      "sha256": "f411814d83a96e86781b1dee41c125b9504da5422dba37cc1d63b016ae39cfe2"
+    },
+    {
+      "url": "https://proxy.golang.org/golang.org/x/sys/@v/v0.36.0.info",
+      "sha256": "74ad401495d24f60a8b6f24d2820e7773e34e2b80156d6b5c700f5c5f134995a"
+    },
+    {
+      "url": "https://proxy.golang.org/golang.org/x/sys/@v/v0.36.0.zip",
+      "sha256": "894ee9a48e191265cd3d2200ddd81b8d75c554a0eabe9fc1a9afbab25a4b29c4"
+    }
+  ],
+  "unchangedUpstreamFiles": 11,
+  "helperSHA256": "5fcadfcd21c5185c9e5cdc40ef13fc116b0ebc7a7dcccd3197686b32bd0a9e18",
+  "executedHelperSHA256": "294baab9fafd74a0bb95f4649cefd49e09031c998bc8712f788c45db82627e61",
+  "reference": "beevik/ntp v1.5.0",
+  "goRuntime": "go1.26.0 linux/amd64",
+  "build": "Official source extracted externally; local go.mod replace only. Dependency file proxy; unchanged upstream bytes verified against archive. No upstream implementation bundled in this repository.",
+  "algorithms": "Authored MoonBit implementation from RFC 5905 sections 10/11.2 and verified erratum 5600; Python filter oracle is an independent mathematical model, not an ntpd execution.",
+  "erratum": "https://errata.rfc-editor.org/eid5600/",
+  "chrony": "Chrony 4.8 Ubuntu package, independent unprivileged process with -x, loopback UDP 43123, local stratum 10. Does not establish UTC accuracy."
+}

@@ -1,0 +1,98 @@
+- banner:
+  - link "◷ 时间观测台":
+    - /url: ./
+    - text: ◷
+    - generic: 时间观测台
+  - generic: MOONBIT NTP / 0.4
+  - generic: ● 本地服务已连接
+- main:
+  - paragraph: LOCAL CLOCK OBSERVATORY
+  - heading "把时间偏差，看清楚。" [level=1]
+  - paragraph: 查询时间源，观察往返延迟与八级过滤结果，再比较多个来源的共识。
+  - paragraph: 仅计算估计值，不调整系统时钟。浏览器通过本地 Node 服务发送 UDP。
+  - region "时间源":
+    - heading "时间源" [level=2]
+    - generic: 01 / 配置
+    - generic: 服务器地址 · 每行一个，最多 8 个
+    - textbox "服务器地址 · 每行一个，最多 8 个":
+      - /placeholder: 127.0.0.1:43123
+      - text: 127.0.0.1:43123
+    - paragraph: 支持域名、IPv4 与 [IPv6]:端口。只有点击查询或采样才会发送请求。
+    - text: 采样轮数
+    - spinbutton "采样轮数": "8"
+    - text: 间隔 / 毫秒
+    - spinbutton "间隔 / 毫秒": "10"
+    - text: 最少一致来源
+    - spinbutton "最少一致来源": "1"
+    - text: 协议版本
+    - combobox "协议版本":
+      - option "4" [selected]
+      - option "3"
+      - option "2"
+    - generic "认证与轮询选项"
+    - checkbox "忽略服务器公布的轮询间隔" [checked]
+    - text: 忽略服务器公布的轮询间隔
+    - paragraph: 仅在获准的测试服务上使用。RATE 退避仍然生效。
+    - generic: 认证配置文件（可选）
+    - button "认证配置文件（可选）"
+    - paragraph: 未设置认证；文件中的密钥只用于当前页面会话。
+    - button "清除认证"
+    - button "单次查询"
+    - button "开始采样 ↗"
+    - button "停止" [disabled]
+    - button "查看离线示例 →"
+  - region "观测结果":
+    - heading "观测结果" [level=2]
+    - generic: 连续采样
+    - status: 采样完成，已形成来源共识。
+    - generic: 时钟偏差
+    - strong: "0.204"
+    - generic: 毫秒 · 正值表示来源更快
+    - generic: 往返延迟
+    - strong: "0.089"
+    - generic: 毫秒 · 最低延迟样本
+    - generic: 一致来源
+    - strong: 1 / 1
+    - generic: 第 8 轮 · 0.1 秒
+    - figure "偏差走势 / ms ● 各来源估计":
+      - generic: 偏差走势 / ms
+      - generic: ● 各来源估计
+      - img "偏差随采样轮数变化，下方表格列出最新数值"
+    - table:
+      - rowgroup:
+        - row "来源 偏差 / ms 延迟 / ms 不确定度 / ms 状态":
+          - columnheader "来源"
+          - columnheader "偏差 / ms"
+          - columnheader "延迟 / ms"
+          - columnheader "不确定度 / ms"
+          - columnheader "状态"
+      - rowgroup:
+        - row "127.0.0.1:43123 0.204 0.089 2.899 纳入共识":
+          - cell "127.0.0.1:43123"
+          - cell "0.204"
+          - cell "0.089"
+          - cell "2.899"
+          - cell "纳入共识"
+    - paragraph: 共识主来源：127.0.0.1:43123 · 抖动 0.397 ms
+    - button "导出 JSON"
+  - heading "报文检视" [level=2]
+  - generic: 02 / 离线工具
+  - paragraph: 解析在浏览器 Worker 内运行的 MoonBit 核心完成。MAC 长度必须明确指定；这里只拆分字节，不验证认证。
+  - generic: 十六进制 NTP 报文
+  - textbox "十六进制 NTP 报文": 23 00 06 ec 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 83 aa 7e 80 00 00 00 00
+  - text: MAC 字节数
+  - combobox "MAC 字节数":
+    - option "0" [selected]
+    - option "4"
+    - option "20"
+    - option "24"
+  - button "解析报文"
+  - generic: "{ \"header\": { \"leap\": 0, \"version\": 4, \"mode\": 3, \"stratum\": 0, \"poll\": 6, \"precision\": -20, \"rootDelaySeconds\": 0, \"rootDispersionSeconds\": 0, \"referenceID\": 0, \"referenceString\": \"\", \"kissCode\": \"\" }, \"headerHex\": \"230006ec00000000000000000000000000000000000000000000000000000000000000000000000083aa7e8000000000\", \"extensions\": [], \"macHex\": \"\" }"
+  - generic: MoonBit 核心 · 本地可复核
+  - navigation:
+    - link "使用说明":
+      - /url: /README.md
+    - link "认证与限制":
+      - /url: /HOST.md
+    - link "公共 API":
+      - /url: /pkg.generated.mbti

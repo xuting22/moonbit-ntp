@@ -36,4 +36,14 @@ try {
   if ($LASTEXITCODE -ne 0) {throw 'benchmark failed'}
   node tools/test-udp.mjs
   if ($LASTEXITCODE -ne 0) {throw 'UDP checks failed'}
+  node tools/compare-reference.mjs --replay
+  if ($LASTEXITCODE -ne 0) {throw 'official reference replay failed'}
+  node tools/test-sync.mjs
+  if ($LASTEXITCODE -ne 0) {throw 'sampling/authentication/CLI checks failed'}
+  node tools/test-http.mjs
+  if ($LASTEXITCODE -ne 0) {throw 'local HTTP checks failed'}
+  node tools/protocol-robustness.mjs
+  if ($LASTEXITCODE -ne 0) {throw 'protocol robustness failed'}
+  node tools/benchmark-sync.mjs
+  if ($LASTEXITCODE -ne 0) {throw 'sampling benchmark failed'}
 } finally {Pop-Location}

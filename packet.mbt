@@ -41,22 +41,22 @@ pub fn Timestamp::unix_seconds(
     raise Invalid("only eras 0 and 1 supported")
   }
   era.to_double() * 4294967296.0 +
-  self.seconds.to_double() +
-  self.fraction.to_double() / 4294967296.0 -
-  2208988800.0
+  self.seconds.to_double() -
+  2208988800.0 +
+  self.fraction.to_double() / 4294967296.0
 }
 
 ///|
 pub fn from_unix(seconds : Double) -> (Timestamp, Int) raise NtpError {
-  let n = seconds + 2208988800.0
-  if n != n || n < 0.0 || n >= 8589934592.0 {
+  if !finite(seconds) || seconds < -2208988800.0 || seconds >= 6380945792.0 {
     raise Invalid("time outside supported eras")
   }
-  let whole = n.to_uint64()
+  let integer = seconds.floor()
+  let whole = (integer + 2208988800.0).to_uint64()
   let era = (whole / 4294967296UL).to_int()
   let stamp : Timestamp = {
     seconds: whole.to_uint(),
-    fraction: ((n - whole.to_double()) * 4294967296.0).to_uint(),
+    fraction: ((seconds - integer) * 4294967296.0).to_uint(),
   }
   (stamp, era)
 }

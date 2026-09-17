@@ -1,0 +1,1563 @@
+[
+  {
+    "name": "offset=-4 rtt=0.001 processing=0 v=2",
+    "kind": "response",
+    "replyHex": "140206ec00000000000000417f000001eef45062000000000000000000000000eef4507c0020c400eef4507c0020c400",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.001,
+    "version": 2
+  },
+  {
+    "name": "offset=-4 rtt=0.001 processing=0 v=3",
+    "kind": "response",
+    "replyHex": "1c0206ec00000000000000417f000001eef45062000000000000000000000000eef4507c0020c400eef4507c0020c400",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.001,
+    "version": 3
+  },
+  {
+    "name": "offset=-4 rtt=0.001 processing=0 v=4",
+    "kind": "response",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4507c0020c400eef4507c0020c400",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.001,
+    "version": 4
+  },
+  {
+    "name": "offset=-4 rtt=0.001 processing=0.02 v=2",
+    "kind": "response",
+    "replyHex": "140206ec00000000000000417f000001eef45062000000000000000000000000eef4507c0020c400eef4507c053f7c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.021,
+    "version": 2
+  },
+  {
+    "name": "offset=-4 rtt=0.001 processing=0.02 v=3",
+    "kind": "response",
+    "replyHex": "1c0206ec00000000000000417f000001eef45062000000000000000000000000eef4507c0020c400eef4507c053f7c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.021,
+    "version": 3
+  },
+  {
+    "name": "offset=-4 rtt=0.001 processing=0.02 v=4",
+    "kind": "response",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4507c0020c400eef4507c053f7c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.021,
+    "version": 4
+  },
+  {
+    "name": "offset=-4 rtt=0.05 processing=0 v=2",
+    "kind": "response",
+    "replyHex": "140206ec00000000000000417f000001eef45062000000000000000000000000eef4507c06666800eef4507c06666800",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.05,
+    "version": 2
+  },
+  {
+    "name": "offset=-4 rtt=0.05 processing=0 v=3",
+    "kind": "response",
+    "replyHex": "1c0206ec00000000000000417f000001eef45062000000000000000000000000eef4507c06666800eef4507c06666800",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.05,
+    "version": 3
+  },
+  {
+    "name": "offset=-4 rtt=0.05 processing=0 v=4",
+    "kind": "response",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4507c06666800eef4507c06666800",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.05,
+    "version": 4
+  },
+  {
+    "name": "offset=-4 rtt=0.05 processing=0.02 v=2",
+    "kind": "response",
+    "replyHex": "140206ec00000000000000417f000001eef45062000000000000000000000000eef4507c06666800eef4507c0b852000",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.07,
+    "version": 2
+  },
+  {
+    "name": "offset=-4 rtt=0.05 processing=0.02 v=3",
+    "kind": "response",
+    "replyHex": "1c0206ec00000000000000417f000001eef45062000000000000000000000000eef4507c06666800eef4507c0b852000",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.07,
+    "version": 3
+  },
+  {
+    "name": "offset=-4 rtt=0.05 processing=0.02 v=4",
+    "kind": "response",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4507c06666800eef4507c0b852000",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.07,
+    "version": 4
+  },
+  {
+    "name": "offset=-4 rtt=0.4 processing=0 v=2",
+    "kind": "response",
+    "replyHex": "140206ec00000000000000417f000001eef45062000000000000000000000000eef4507c33333400eef4507c33333400",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.4,
+    "version": 2
+  },
+  {
+    "name": "offset=-4 rtt=0.4 processing=0 v=3",
+    "kind": "response",
+    "replyHex": "1c0206ec00000000000000417f000001eef45062000000000000000000000000eef4507c33333400eef4507c33333400",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.4,
+    "version": 3
+  },
+  {
+    "name": "offset=-4 rtt=0.4 processing=0 v=4",
+    "kind": "response",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4507c33333400eef4507c33333400",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.4,
+    "version": 4
+  },
+  {
+    "name": "offset=-4 rtt=0.4 processing=0.02 v=2",
+    "kind": "response",
+    "replyHex": "140206ec00000000000000417f000001eef45062000000000000000000000000eef4507c33333400eef4507c3851ec00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.42,
+    "version": 2
+  },
+  {
+    "name": "offset=-4 rtt=0.4 processing=0.02 v=3",
+    "kind": "response",
+    "replyHex": "1c0206ec00000000000000417f000001eef45062000000000000000000000000eef4507c33333400eef4507c3851ec00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.42,
+    "version": 3
+  },
+  {
+    "name": "offset=-4 rtt=0.4 processing=0.02 v=4",
+    "kind": "response",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4507c33333400eef4507c3851ec00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.42,
+    "version": 4
+  },
+  {
+    "name": "offset=-0.125 rtt=0.001 processing=0 v=2",
+    "kind": "response",
+    "replyHex": "140206ec00000000000000417f000001eef45062000000000000000000000000eef4507fe020c400eef4507fe020c400",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.001,
+    "version": 2
+  },
+  {
+    "name": "offset=-0.125 rtt=0.001 processing=0 v=3",
+    "kind": "response",
+    "replyHex": "1c0206ec00000000000000417f000001eef45062000000000000000000000000eef4507fe020c400eef4507fe020c400",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.001,
+    "version": 3
+  },
+  {
+    "name": "offset=-0.125 rtt=0.001 processing=0 v=4",
+    "kind": "response",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4507fe020c400eef4507fe020c400",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.001,
+    "version": 4
+  },
+  {
+    "name": "offset=-0.125 rtt=0.001 processing=0.02 v=2",
+    "kind": "response",
+    "replyHex": "140206ec00000000000000417f000001eef45062000000000000000000000000eef4507fe020c400eef4507fe53f7c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.021,
+    "version": 2
+  },
+  {
+    "name": "offset=-0.125 rtt=0.001 processing=0.02 v=3",
+    "kind": "response",
+    "replyHex": "1c0206ec00000000000000417f000001eef45062000000000000000000000000eef4507fe020c400eef4507fe53f7c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.021,
+    "version": 3
+  },
+  {
+    "name": "offset=-0.125 rtt=0.001 processing=0.02 v=4",
+    "kind": "response",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4507fe020c400eef4507fe53f7c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.021,
+    "version": 4
+  },
+  {
+    "name": "offset=-0.125 rtt=0.05 processing=0 v=2",
+    "kind": "response",
+    "replyHex": "140206ec00000000000000417f000001eef45062000000000000000000000000eef4507fe6666800eef4507fe6666800",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.05,
+    "version": 2
+  },
+  {
+    "name": "offset=-0.125 rtt=0.05 processing=0 v=3",
+    "kind": "response",
+    "replyHex": "1c0206ec00000000000000417f000001eef45062000000000000000000000000eef4507fe6666800eef4507fe6666800",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.05,
+    "version": 3
+  },
+  {
+    "name": "offset=-0.125 rtt=0.05 processing=0 v=4",
+    "kind": "response",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4507fe6666800eef4507fe6666800",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.05,
+    "version": 4
+  },
+  {
+    "name": "offset=-0.125 rtt=0.05 processing=0.02 v=2",
+    "kind": "response",
+    "replyHex": "140206ec00000000000000417f000001eef45062000000000000000000000000eef4507fe6666800eef4507feb852000",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.07,
+    "version": 2
+  },
+  {
+    "name": "offset=-0.125 rtt=0.05 processing=0.02 v=3",
+    "kind": "response",
+    "replyHex": "1c0206ec00000000000000417f000001eef45062000000000000000000000000eef4507fe6666800eef4507feb852000",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.07,
+    "version": 3
+  },
+  {
+    "name": "offset=-0.125 rtt=0.05 processing=0.02 v=4",
+    "kind": "response",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4507fe6666800eef4507feb852000",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.07,
+    "version": 4
+  },
+  {
+    "name": "offset=-0.125 rtt=0.4 processing=0 v=2",
+    "kind": "response",
+    "replyHex": "140206ec00000000000000417f000001eef45062000000000000000000000000eef4508013333400eef4508013333400",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.4,
+    "version": 2
+  },
+  {
+    "name": "offset=-0.125 rtt=0.4 processing=0 v=3",
+    "kind": "response",
+    "replyHex": "1c0206ec00000000000000417f000001eef45062000000000000000000000000eef4508013333400eef4508013333400",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.4,
+    "version": 3
+  },
+  {
+    "name": "offset=-0.125 rtt=0.4 processing=0 v=4",
+    "kind": "response",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508013333400eef4508013333400",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.4,
+    "version": 4
+  },
+  {
+    "name": "offset=-0.125 rtt=0.4 processing=0.02 v=2",
+    "kind": "response",
+    "replyHex": "140206ec00000000000000417f000001eef45062000000000000000000000000eef4508013333400eef450801851ec00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.42,
+    "version": 2
+  },
+  {
+    "name": "offset=-0.125 rtt=0.4 processing=0.02 v=3",
+    "kind": "response",
+    "replyHex": "1c0206ec00000000000000417f000001eef45062000000000000000000000000eef4508013333400eef450801851ec00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.42,
+    "version": 3
+  },
+  {
+    "name": "offset=-0.125 rtt=0.4 processing=0.02 v=4",
+    "kind": "response",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508013333400eef450801851ec00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.42,
+    "version": 4
+  },
+  {
+    "name": "offset=0 rtt=0.001 processing=0 v=2",
+    "kind": "response",
+    "replyHex": "140206ec00000000000000417f000001eef45062000000000000000000000000eef450800020c400eef450800020c400",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.001,
+    "version": 2
+  },
+  {
+    "name": "offset=0 rtt=0.001 processing=0 v=3",
+    "kind": "response",
+    "replyHex": "1c0206ec00000000000000417f000001eef45062000000000000000000000000eef450800020c400eef450800020c400",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.001,
+    "version": 3
+  },
+  {
+    "name": "offset=0 rtt=0.001 processing=0 v=4",
+    "kind": "response",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef450800020c400eef450800020c400",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.001,
+    "version": 4
+  },
+  {
+    "name": "offset=0 rtt=0.001 processing=0.02 v=2",
+    "kind": "response",
+    "replyHex": "140206ec00000000000000417f000001eef45062000000000000000000000000eef450800020c400eef45080053f7c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.021,
+    "version": 2
+  },
+  {
+    "name": "offset=0 rtt=0.001 processing=0.02 v=3",
+    "kind": "response",
+    "replyHex": "1c0206ec00000000000000417f000001eef45062000000000000000000000000eef450800020c400eef45080053f7c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.021,
+    "version": 3
+  },
+  {
+    "name": "offset=0 rtt=0.001 processing=0.02 v=4",
+    "kind": "response",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef450800020c400eef45080053f7c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.021,
+    "version": 4
+  },
+  {
+    "name": "offset=0 rtt=0.05 processing=0 v=2",
+    "kind": "response",
+    "replyHex": "140206ec00000000000000417f000001eef45062000000000000000000000000eef4508006666800eef4508006666800",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.05,
+    "version": 2
+  },
+  {
+    "name": "offset=0 rtt=0.05 processing=0 v=3",
+    "kind": "response",
+    "replyHex": "1c0206ec00000000000000417f000001eef45062000000000000000000000000eef4508006666800eef4508006666800",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.05,
+    "version": 3
+  },
+  {
+    "name": "offset=0 rtt=0.05 processing=0 v=4",
+    "kind": "response",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508006666800eef4508006666800",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.05,
+    "version": 4
+  },
+  {
+    "name": "offset=0 rtt=0.05 processing=0.02 v=2",
+    "kind": "response",
+    "replyHex": "140206ec00000000000000417f000001eef45062000000000000000000000000eef4508006666800eef450800b852000",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.07,
+    "version": 2
+  },
+  {
+    "name": "offset=0 rtt=0.05 processing=0.02 v=3",
+    "kind": "response",
+    "replyHex": "1c0206ec00000000000000417f000001eef45062000000000000000000000000eef4508006666800eef450800b852000",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.07,
+    "version": 3
+  },
+  {
+    "name": "offset=0 rtt=0.05 processing=0.02 v=4",
+    "kind": "response",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508006666800eef450800b852000",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.07,
+    "version": 4
+  },
+  {
+    "name": "offset=0 rtt=0.4 processing=0 v=2",
+    "kind": "response",
+    "replyHex": "140206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333400eef4508033333400",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.4,
+    "version": 2
+  },
+  {
+    "name": "offset=0 rtt=0.4 processing=0 v=3",
+    "kind": "response",
+    "replyHex": "1c0206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333400eef4508033333400",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.4,
+    "version": 3
+  },
+  {
+    "name": "offset=0 rtt=0.4 processing=0 v=4",
+    "kind": "response",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333400eef4508033333400",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.4,
+    "version": 4
+  },
+  {
+    "name": "offset=0 rtt=0.4 processing=0.02 v=2",
+    "kind": "response",
+    "replyHex": "140206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333400eef450803851ec00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.42,
+    "version": 2
+  },
+  {
+    "name": "offset=0 rtt=0.4 processing=0.02 v=3",
+    "kind": "response",
+    "replyHex": "1c0206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333400eef450803851ec00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.42,
+    "version": 3
+  },
+  {
+    "name": "offset=0 rtt=0.4 processing=0.02 v=4",
+    "kind": "response",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333400eef450803851ec00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.42,
+    "version": 4
+  },
+  {
+    "name": "offset=0.001 rtt=0.001 processing=0 v=2",
+    "kind": "response",
+    "replyHex": "140206ec00000000000000417f000001eef45062000000000000000000000000eef4508000624c00eef4508000624c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.001,
+    "version": 2
+  },
+  {
+    "name": "offset=0.001 rtt=0.001 processing=0 v=3",
+    "kind": "response",
+    "replyHex": "1c0206ec00000000000000417f000001eef45062000000000000000000000000eef4508000624c00eef4508000624c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.001,
+    "version": 3
+  },
+  {
+    "name": "offset=0.001 rtt=0.001 processing=0 v=4",
+    "kind": "response",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508000624c00eef4508000624c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.001,
+    "version": 4
+  },
+  {
+    "name": "offset=0.001 rtt=0.001 processing=0.02 v=2",
+    "kind": "response",
+    "replyHex": "140206ec00000000000000417f000001eef45062000000000000000000000000eef4508000624c00eef4508005810400",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.021,
+    "version": 2
+  },
+  {
+    "name": "offset=0.001 rtt=0.001 processing=0.02 v=3",
+    "kind": "response",
+    "replyHex": "1c0206ec00000000000000417f000001eef45062000000000000000000000000eef4508000624c00eef4508005810400",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.021,
+    "version": 3
+  },
+  {
+    "name": "offset=0.001 rtt=0.001 processing=0.02 v=4",
+    "kind": "response",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508000624c00eef4508005810400",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.021,
+    "version": 4
+  },
+  {
+    "name": "offset=0.001 rtt=0.05 processing=0 v=2",
+    "kind": "response",
+    "replyHex": "140206ec00000000000000417f000001eef45062000000000000000000000000eef4508006a7f000eef4508006a7f000",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.05,
+    "version": 2
+  },
+  {
+    "name": "offset=0.001 rtt=0.05 processing=0 v=3",
+    "kind": "response",
+    "replyHex": "1c0206ec00000000000000417f000001eef45062000000000000000000000000eef4508006a7f000eef4508006a7f000",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.05,
+    "version": 3
+  },
+  {
+    "name": "offset=0.001 rtt=0.05 processing=0 v=4",
+    "kind": "response",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508006a7f000eef4508006a7f000",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.05,
+    "version": 4
+  },
+  {
+    "name": "offset=0.001 rtt=0.05 processing=0.02 v=2",
+    "kind": "response",
+    "replyHex": "140206ec00000000000000417f000001eef45062000000000000000000000000eef4508006a7f000eef450800bc6a800",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.07,
+    "version": 2
+  },
+  {
+    "name": "offset=0.001 rtt=0.05 processing=0.02 v=3",
+    "kind": "response",
+    "replyHex": "1c0206ec00000000000000417f000001eef45062000000000000000000000000eef4508006a7f000eef450800bc6a800",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.07,
+    "version": 3
+  },
+  {
+    "name": "offset=0.001 rtt=0.05 processing=0.02 v=4",
+    "kind": "response",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508006a7f000eef450800bc6a800",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.07,
+    "version": 4
+  },
+  {
+    "name": "offset=0.001 rtt=0.4 processing=0 v=2",
+    "kind": "response",
+    "replyHex": "140206ec00000000000000417f000001eef45062000000000000000000000000eef450803374bc00eef450803374bc00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.4,
+    "version": 2
+  },
+  {
+    "name": "offset=0.001 rtt=0.4 processing=0 v=3",
+    "kind": "response",
+    "replyHex": "1c0206ec00000000000000417f000001eef45062000000000000000000000000eef450803374bc00eef450803374bc00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.4,
+    "version": 3
+  },
+  {
+    "name": "offset=0.001 rtt=0.4 processing=0 v=4",
+    "kind": "response",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef450803374bc00eef450803374bc00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.4,
+    "version": 4
+  },
+  {
+    "name": "offset=0.001 rtt=0.4 processing=0.02 v=2",
+    "kind": "response",
+    "replyHex": "140206ec00000000000000417f000001eef45062000000000000000000000000eef450803374bc00eef4508038937400",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.42,
+    "version": 2
+  },
+  {
+    "name": "offset=0.001 rtt=0.4 processing=0.02 v=3",
+    "kind": "response",
+    "replyHex": "1c0206ec00000000000000417f000001eef45062000000000000000000000000eef450803374bc00eef4508038937400",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.42,
+    "version": 3
+  },
+  {
+    "name": "offset=0.001 rtt=0.4 processing=0.02 v=4",
+    "kind": "response",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef450803374bc00eef4508038937400",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.42,
+    "version": 4
+  },
+  {
+    "name": "offset=3 rtt=0.001 processing=0 v=2",
+    "kind": "response",
+    "replyHex": "140206ec00000000000000417f000001eef45062000000000000000000000000eef450830020c400eef450830020c400",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.001,
+    "version": 2
+  },
+  {
+    "name": "offset=3 rtt=0.001 processing=0 v=3",
+    "kind": "response",
+    "replyHex": "1c0206ec00000000000000417f000001eef45062000000000000000000000000eef450830020c400eef450830020c400",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.001,
+    "version": 3
+  },
+  {
+    "name": "offset=3 rtt=0.001 processing=0 v=4",
+    "kind": "response",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef450830020c400eef450830020c400",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.001,
+    "version": 4
+  },
+  {
+    "name": "offset=3 rtt=0.001 processing=0.02 v=2",
+    "kind": "response",
+    "replyHex": "140206ec00000000000000417f000001eef45062000000000000000000000000eef450830020c400eef45083053f7c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.021,
+    "version": 2
+  },
+  {
+    "name": "offset=3 rtt=0.001 processing=0.02 v=3",
+    "kind": "response",
+    "replyHex": "1c0206ec00000000000000417f000001eef45062000000000000000000000000eef450830020c400eef45083053f7c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.021,
+    "version": 3
+  },
+  {
+    "name": "offset=3 rtt=0.001 processing=0.02 v=4",
+    "kind": "response",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef450830020c400eef45083053f7c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.021,
+    "version": 4
+  },
+  {
+    "name": "offset=3 rtt=0.05 processing=0 v=2",
+    "kind": "response",
+    "replyHex": "140206ec00000000000000417f000001eef45062000000000000000000000000eef4508306666800eef4508306666800",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.05,
+    "version": 2
+  },
+  {
+    "name": "offset=3 rtt=0.05 processing=0 v=3",
+    "kind": "response",
+    "replyHex": "1c0206ec00000000000000417f000001eef45062000000000000000000000000eef4508306666800eef4508306666800",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.05,
+    "version": 3
+  },
+  {
+    "name": "offset=3 rtt=0.05 processing=0 v=4",
+    "kind": "response",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508306666800eef4508306666800",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.05,
+    "version": 4
+  },
+  {
+    "name": "offset=3 rtt=0.05 processing=0.02 v=2",
+    "kind": "response",
+    "replyHex": "140206ec00000000000000417f000001eef45062000000000000000000000000eef4508306666800eef450830b852000",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.07,
+    "version": 2
+  },
+  {
+    "name": "offset=3 rtt=0.05 processing=0.02 v=3",
+    "kind": "response",
+    "replyHex": "1c0206ec00000000000000417f000001eef45062000000000000000000000000eef4508306666800eef450830b852000",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.07,
+    "version": 3
+  },
+  {
+    "name": "offset=3 rtt=0.05 processing=0.02 v=4",
+    "kind": "response",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508306666800eef450830b852000",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.07,
+    "version": 4
+  },
+  {
+    "name": "offset=3 rtt=0.4 processing=0 v=2",
+    "kind": "response",
+    "replyHex": "140206ec00000000000000417f000001eef45062000000000000000000000000eef4508333333400eef4508333333400",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.4,
+    "version": 2
+  },
+  {
+    "name": "offset=3 rtt=0.4 processing=0 v=3",
+    "kind": "response",
+    "replyHex": "1c0206ec00000000000000417f000001eef45062000000000000000000000000eef4508333333400eef4508333333400",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.4,
+    "version": 3
+  },
+  {
+    "name": "offset=3 rtt=0.4 processing=0 v=4",
+    "kind": "response",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508333333400eef4508333333400",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.4,
+    "version": 4
+  },
+  {
+    "name": "offset=3 rtt=0.4 processing=0.02 v=2",
+    "kind": "response",
+    "replyHex": "140206ec00000000000000417f000001eef45062000000000000000000000000eef4508333333400eef450833851ec00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.42,
+    "version": 2
+  },
+  {
+    "name": "offset=3 rtt=0.4 processing=0.02 v=3",
+    "kind": "response",
+    "replyHex": "1c0206ec00000000000000417f000001eef45062000000000000000000000000eef4508333333400eef450833851ec00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.42,
+    "version": 3
+  },
+  {
+    "name": "offset=3 rtt=0.4 processing=0.02 v=4",
+    "kind": "response",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508333333400eef450833851ec00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.42,
+    "version": 4
+  },
+  {
+    "name": "stratum-one reference",
+    "kind": "response",
+    "replyHex": "240106ec000000000000004147505300eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4
+  },
+  {
+    "name": "negative signed root delay",
+    "kind": "response",
+    "replyHex": "240206ecffffc000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "intentionalDifference": "RFC signed 16.16 root delay versus beevik unsigned interpretation",
+    "differenceFields": [
+      "rootDelaySeconds",
+      "rootDistanceSeconds",
+      "health acceptance"
+    ]
+  },
+  {
+    "name": "fractional poll exponent",
+    "kind": "response",
+    "replyHex": "2402faec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4
+  },
+  {
+    "name": "very fine precision",
+    "kind": "response",
+    "replyHex": "240206d800000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "intentionalDifference": "Sub-nanosecond precision remains positive; Go duration truncates to zero",
+    "differenceFields": [
+      "precisionSeconds"
+    ]
+  },
+  {
+    "name": "leap unsynchronized",
+    "kind": "response",
+    "replyHex": "e40206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4
+  },
+  {
+    "name": "invalid stratum",
+    "kind": "response",
+    "replyHex": "241006ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4
+  },
+  {
+    "name": "excessive root dispersion",
+    "kind": "response",
+    "replyHex": "240206ec00000000001100007f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4
+  },
+  {
+    "name": "kiss RATE",
+    "kind": "response",
+    "replyHex": "240006ec000000000000004152415445eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4
+  },
+  {
+    "name": "era pivot 2085978495.875",
+    "kind": "response",
+    "replyHex": "240206ec00000000000000417f000001ffffffe1e00000000000000000000000000000006000000000000000651eb800",
+    "sentUnix": 2085978495.875,
+    "receivedUnix": 2085978496.395,
+    "version": 4,
+    "intentionalDifference": "Modular first-order differences avoid the reference minError unsigned comparison across the 2036 era boundary",
+    "differenceFields": [
+      "minimumErrorSeconds"
+    ]
+  },
+  {
+    "name": "era pivot 2085978496.25",
+    "kind": "response",
+    "replyHex": "240206ec00000000000000417f000001ffffffe240000000000000000000000000000000c000000000000000c51eb800",
+    "sentUnix": 2085978496.25,
+    "receivedUnix": 2085978496.77,
+    "version": 4
+  },
+  {
+    "name": "era pivot 1000.25",
+    "kind": "response",
+    "replyHex": "240206ec00000000000000417f00000183aa824a40000000000000000000000083aa8268c000000083aa8268c51eb851",
+    "sentUnix": 1000.25,
+    "receivedUnix": 1000.77,
+    "version": 4
+  },
+  {
+    "name": "era pivot -1.25",
+    "kind": "response",
+    "replyHex": "240206ec00000000000000417f00000183aa7e60c0000000000000000000000083aa7e7f4000000083aa7e7f451eb851",
+    "sentUnix": -1.25,
+    "receivedUnix": -0.73,
+    "version": 4,
+    "intentionalDifference": "Local pivot resolves pre-1970; beevik absolute time assumes era 1 for raw values before 1970",
+    "differenceFields": [
+      "referenceUnix",
+      "serverTransmitUnix"
+    ]
+  },
+  {
+    "name": "MD5 hex",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "MD5",
+      "key": "HEX:000102030405060708090a0b0c0d0e0f",
+      "keyID": 12345
+    }
+  },
+  {
+    "name": "MD5 ascii",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "MD5",
+      "key": "ASCII:kkkkkkkkkkkkkkkk",
+      "keyID": 12345
+    }
+  },
+  {
+    "name": "MD5 long",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "MD5",
+      "key": "ASCII:zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz",
+      "keyID": 12345
+    }
+  },
+  {
+    "name": "MD5 short",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "MD5",
+      "key": "ASCII:x",
+      "keyID": 12345
+    }
+  },
+  {
+    "name": "MD5 malformed",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "MD5",
+      "key": "HEX:0z",
+      "keyID": 12345
+    }
+  },
+  {
+    "name": "MD5 extension bytes 16",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "MD5",
+      "key": "HEX:000102030405060708090a0b0c0d0e0f",
+      "keyID": 12345
+    },
+    "extensionHex": "12340010000000000000000000000000"
+  },
+  {
+    "name": "MD5 extension bytes 20",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "MD5",
+      "key": "HEX:000102030405060708090a0b0c0d0e0f",
+      "keyID": 12345
+    },
+    "extensionHex": "1234001400000000000000000000000000000000"
+  },
+  {
+    "name": "MD5 extension bytes 24",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "MD5",
+      "key": "HEX:000102030405060708090a0b0c0d0e0f",
+      "keyID": 12345
+    },
+    "extensionHex": "123400180000000000000000000000000000000000000000"
+  },
+  {
+    "name": "MD5 extension bytes 28",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "MD5",
+      "key": "HEX:000102030405060708090a0b0c0d0e0f",
+      "keyID": 12345
+    },
+    "extensionHex": "1234001c000000000000000000000000000000000000000000000000"
+  },
+  {
+    "name": "SHA1 hex",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "SHA1",
+      "key": "HEX:000102030405060708090a0b0c0d0e0f10111213",
+      "keyID": 12345
+    }
+  },
+  {
+    "name": "SHA1 ascii",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "SHA1",
+      "key": "ASCII:kkkkkkkkkkkkkkkkkkkk",
+      "keyID": 12345
+    }
+  },
+  {
+    "name": "SHA1 long",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "SHA1",
+      "key": "ASCII:zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz",
+      "keyID": 12345
+    }
+  },
+  {
+    "name": "SHA1 short",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "SHA1",
+      "key": "ASCII:x",
+      "keyID": 12345
+    }
+  },
+  {
+    "name": "SHA1 malformed",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "SHA1",
+      "key": "HEX:0z",
+      "keyID": 12345
+    }
+  },
+  {
+    "name": "SHA1 extension bytes 16",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "SHA1",
+      "key": "HEX:000102030405060708090a0b0c0d0e0f10111213",
+      "keyID": 12345
+    },
+    "extensionHex": "12340010000000000000000000000000"
+  },
+  {
+    "name": "SHA1 extension bytes 20",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "SHA1",
+      "key": "HEX:000102030405060708090a0b0c0d0e0f10111213",
+      "keyID": 12345
+    },
+    "extensionHex": "1234001400000000000000000000000000000000"
+  },
+  {
+    "name": "SHA1 extension bytes 24",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "SHA1",
+      "key": "HEX:000102030405060708090a0b0c0d0e0f10111213",
+      "keyID": 12345
+    },
+    "extensionHex": "123400180000000000000000000000000000000000000000"
+  },
+  {
+    "name": "SHA1 extension bytes 28",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "SHA1",
+      "key": "HEX:000102030405060708090a0b0c0d0e0f10111213",
+      "keyID": 12345
+    },
+    "extensionHex": "1234001c000000000000000000000000000000000000000000000000"
+  },
+  {
+    "name": "SHA256 hex",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "SHA256",
+      "key": "HEX:000102030405060708090a0b0c0d0e0f10111213",
+      "keyID": 12345
+    }
+  },
+  {
+    "name": "SHA256 ascii",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "SHA256",
+      "key": "ASCII:kkkkkkkkkkkkkkkkkkkk",
+      "keyID": 12345
+    }
+  },
+  {
+    "name": "SHA256 long",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "SHA256",
+      "key": "ASCII:zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz",
+      "keyID": 12345
+    }
+  },
+  {
+    "name": "SHA256 short",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "SHA256",
+      "key": "ASCII:x",
+      "keyID": 12345
+    }
+  },
+  {
+    "name": "SHA256 malformed",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "SHA256",
+      "key": "HEX:0z",
+      "keyID": 12345
+    }
+  },
+  {
+    "name": "SHA256 extension bytes 16",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "SHA256",
+      "key": "HEX:000102030405060708090a0b0c0d0e0f10111213",
+      "keyID": 12345
+    },
+    "extensionHex": "12340010000000000000000000000000"
+  },
+  {
+    "name": "SHA256 extension bytes 20",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "SHA256",
+      "key": "HEX:000102030405060708090a0b0c0d0e0f10111213",
+      "keyID": 12345
+    },
+    "extensionHex": "1234001400000000000000000000000000000000"
+  },
+  {
+    "name": "SHA256 extension bytes 24",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "SHA256",
+      "key": "HEX:000102030405060708090a0b0c0d0e0f10111213",
+      "keyID": 12345
+    },
+    "extensionHex": "123400180000000000000000000000000000000000000000"
+  },
+  {
+    "name": "SHA256 extension bytes 28",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "SHA256",
+      "key": "HEX:000102030405060708090a0b0c0d0e0f10111213",
+      "keyID": 12345
+    },
+    "extensionHex": "1234001c000000000000000000000000000000000000000000000000"
+  },
+  {
+    "name": "SHA512 hex",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "SHA512",
+      "key": "HEX:000102030405060708090a0b0c0d0e0f10111213",
+      "keyID": 12345
+    }
+  },
+  {
+    "name": "SHA512 ascii",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "SHA512",
+      "key": "ASCII:kkkkkkkkkkkkkkkkkkkk",
+      "keyID": 12345
+    }
+  },
+  {
+    "name": "SHA512 long",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "SHA512",
+      "key": "ASCII:zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz",
+      "keyID": 12345
+    }
+  },
+  {
+    "name": "SHA512 short",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "SHA512",
+      "key": "ASCII:x",
+      "keyID": 12345
+    }
+  },
+  {
+    "name": "SHA512 malformed",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "SHA512",
+      "key": "HEX:0z",
+      "keyID": 12345
+    }
+  },
+  {
+    "name": "SHA512 extension bytes 16",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "SHA512",
+      "key": "HEX:000102030405060708090a0b0c0d0e0f10111213",
+      "keyID": 12345
+    },
+    "extensionHex": "12340010000000000000000000000000"
+  },
+  {
+    "name": "SHA512 extension bytes 20",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "SHA512",
+      "key": "HEX:000102030405060708090a0b0c0d0e0f10111213",
+      "keyID": 12345
+    },
+    "extensionHex": "1234001400000000000000000000000000000000"
+  },
+  {
+    "name": "SHA512 extension bytes 24",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "SHA512",
+      "key": "HEX:000102030405060708090a0b0c0d0e0f10111213",
+      "keyID": 12345
+    },
+    "extensionHex": "123400180000000000000000000000000000000000000000"
+  },
+  {
+    "name": "SHA512 extension bytes 28",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "SHA512",
+      "key": "HEX:000102030405060708090a0b0c0d0e0f10111213",
+      "keyID": 12345
+    },
+    "extensionHex": "1234001c000000000000000000000000000000000000000000000000"
+  },
+  {
+    "name": "AES128 hex",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "AES128",
+      "key": "HEX:000102030405060708090a0b0c0d0e0f",
+      "keyID": 12345
+    }
+  },
+  {
+    "name": "AES128 ascii",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "AES128",
+      "key": "ASCII:kkkkkkkkkkkkkkkk",
+      "keyID": 12345
+    }
+  },
+  {
+    "name": "AES128 long",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "AES128",
+      "key": "ASCII:zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz",
+      "keyID": 12345
+    }
+  },
+  {
+    "name": "AES128 short",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "AES128",
+      "key": "ASCII:x",
+      "keyID": 12345
+    }
+  },
+  {
+    "name": "AES128 malformed",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "AES128",
+      "key": "HEX:0z",
+      "keyID": 12345
+    }
+  },
+  {
+    "name": "AES128 extension bytes 16",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "AES128",
+      "key": "HEX:000102030405060708090a0b0c0d0e0f",
+      "keyID": 12345
+    },
+    "extensionHex": "12340010000000000000000000000000"
+  },
+  {
+    "name": "AES128 extension bytes 20",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "AES128",
+      "key": "HEX:000102030405060708090a0b0c0d0e0f",
+      "keyID": 12345
+    },
+    "extensionHex": "1234001400000000000000000000000000000000"
+  },
+  {
+    "name": "AES128 extension bytes 24",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "AES128",
+      "key": "HEX:000102030405060708090a0b0c0d0e0f",
+      "keyID": 12345
+    },
+    "extensionHex": "123400180000000000000000000000000000000000000000"
+  },
+  {
+    "name": "AES128 extension bytes 28",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "AES128",
+      "key": "HEX:000102030405060708090a0b0c0d0e0f",
+      "keyID": 12345
+    },
+    "extensionHex": "1234001c000000000000000000000000000000000000000000000000"
+  },
+  {
+    "name": "AES256 hex",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "AES256",
+      "key": "HEX:000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+      "keyID": 12345
+    }
+  },
+  {
+    "name": "AES256 ascii",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "AES256",
+      "key": "ASCII:kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk",
+      "keyID": 12345
+    }
+  },
+  {
+    "name": "AES256 long",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "AES256",
+      "key": "ASCII:zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz",
+      "keyID": 12345
+    }
+  },
+  {
+    "name": "AES256 short",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "AES256",
+      "key": "ASCII:x",
+      "keyID": 12345
+    }
+  },
+  {
+    "name": "AES256 malformed",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "AES256",
+      "key": "HEX:0z",
+      "keyID": 12345
+    }
+  },
+  {
+    "name": "AES256 extension bytes 16",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "AES256",
+      "key": "HEX:000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+      "keyID": 12345
+    },
+    "extensionHex": "12340010000000000000000000000000"
+  },
+  {
+    "name": "AES256 extension bytes 20",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "AES256",
+      "key": "HEX:000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+      "keyID": 12345
+    },
+    "extensionHex": "1234001400000000000000000000000000000000"
+  },
+  {
+    "name": "AES256 extension bytes 24",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "AES256",
+      "key": "HEX:000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+      "keyID": 12345
+    },
+    "extensionHex": "123400180000000000000000000000000000000000000000"
+  },
+  {
+    "name": "AES256 extension bytes 28",
+    "kind": "auth",
+    "replyHex": "240206ec00000000000000417f000001eef45062000000000000000000000000eef4508033333000eef4508035c28c00",
+    "sentUnix": 1800000000.0,
+    "receivedUnix": 1800000000.21,
+    "version": 4,
+    "auth": {
+      "type": "AES256",
+      "key": "HEX:000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+      "keyID": 12345
+    },
+    "extensionHex": "1234001c000000000000000000000000000000000000000000000000"
+  }
+]

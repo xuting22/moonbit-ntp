@@ -1,5 +1,6 @@
 import {
   "localreview/ntp" @lib,
+  "moonbitlang/core/json",
 }
 
 supported_targets = "js"
@@ -14,6 +15,7 @@ options(
         "query_request",
         "query_response",
         "query_response_at",
+        "protocol",
       ],
       "format": "esm",
     },

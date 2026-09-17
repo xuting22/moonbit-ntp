@@ -6,7 +6,13 @@ import {
 }
 
 // Values
+pub fn analyze(Timestamp, Packet, Timestamp, Double) -> ResponseInfo raise NtpError
+
+pub fn combine_peers(Array[PeerEstimate], minimum? : Int, cluster_minimum? : Int, maximum_distance? : Double) -> Consensus? raise NtpError
+
 pub fn decode(Bytes) -> Packet raise NtpError
+
+pub fn decode_datagram(Bytes, mac_length? : Int) -> Datagram raise NtpError
 
 pub fn from_unix(Double) -> (Timestamp, Int) raise NtpError
 
@@ -22,6 +28,62 @@ pub suberror NtpError {
 } derive(@debug.Debug)
 
 // Types and methods
+pub struct ClockFilter {
+  entries : Array[FilterSample]
+  precision : Double
+  tolerance : Double
+  mut last_time : Double?
+  mut accepted : FilterEstimate?
+  mut reach : Int
+} derive(@debug.Debug)
+pub fn ClockFilter::begin_poll(Self, Double) -> Unit raise NtpError
+pub fn ClockFilter::estimate(Self, Double) -> FilterEstimate? raise NtpError
+pub fn ClockFilter::new(precision_seconds? : Double, frequency_tolerance? : Double) -> Self raise NtpError
+pub fn ClockFilter::observe(Self, FilterSample) -> FilterEstimate? raise NtpError
+
+pub(all) struct Consensus {
+  offset_seconds : Double
+  jitter_seconds : Double
+  selection_jitter_seconds : Double
+  interval_low : Double
+  interval_high : Double
+  system_peer : String
+  survivors : Array[String]
+  rejected : Array[String]
+} derive(@debug.Debug)
+
+pub(all) struct Datagram {
+  header : Packet
+  extensions : Array[ExtensionField]
+  mac : Bytes
+} derive(Eq, @debug.Debug)
+pub fn Datagram::encode(Self) -> Bytes raise NtpError
+
+pub(all) struct ExtensionField {
+  field_type : Int
+  value : Bytes
+} derive(Eq, @debug.Debug)
+
+pub(all) struct FilterEstimate {
+  offset_seconds : Double
+  delay_seconds : Double
+  dispersion_seconds : Double
+  jitter_seconds : Double
+  selected_at : Double
+  evaluated_at : Double
+  valid_samples : Int
+  reach : Int
+  fresh : Bool
+} derive(@debug.Debug)
+pub fn FilterEstimate::root_distance(Self, Double, Double) -> Double raise NtpError
+
+pub(all) struct FilterSample {
+  offset_seconds : Double
+  delay_seconds : Double
+  dispersion_seconds : Double
+  received_at : Double
+} derive(Eq, @debug.Debug)
+
 pub(all) struct Packet {
   leap : Int
   version : Int
@@ -39,8 +101,28 @@ pub(all) struct Packet {
 } derive(Eq, @debug.Debug)
 pub fn Packet::encode(Self) -> Bytes raise NtpError
 pub fn Packet::kiss_code(Self) -> String?
+pub fn Packet::reference_string(Self) -> String
 pub fn Packet::root_distance(Self, Sample) -> Double
 pub fn Packet::validate_health(Self) -> Unit raise NtpError
+
+pub(all) struct PeerEstimate {
+  id : String
+  offset_seconds : Double
+  root_distance_seconds : Double
+  jitter_seconds : Double
+  stratum : Int
+} derive(Eq, @debug.Debug)
+
+pub(all) struct ResponseInfo {
+  sample : Sample
+  minimum_error_seconds : Double
+  server_transmit_unix : Double
+  reference_unix : Double
+  precision_seconds : Double
+  poll_seconds : Double
+  root_distance_seconds : Double
+  reference_string : String
+} derive(@debug.Debug)
 
 pub struct Sample {
   offset_seconds : Double
@@ -52,6 +134,7 @@ pub(all) struct Timestamp {
   fraction : UInt
 } derive(Eq, @debug.Debug)
 pub fn Timestamp::difference(Self, Self) -> Double
+pub fn Timestamp::near_unix(Self, Double) -> Double raise NtpError
 pub fn Timestamp::unix_seconds(Self, Int) -> Double raise NtpError
 pub fn Timestamp::zero() -> Self
 

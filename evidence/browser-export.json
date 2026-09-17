@@ -1,0 +1,92 @@
+{
+  "format": "moonbit-ntp-observations/1",
+  "kind": "单次查询",
+  "exportedAt": "2026-09-17T19:03:56.239Z",
+  "rounds": [
+    {
+      "round": 1,
+      "elapsedSeconds": 0.0003210849999959464,
+      "observations": [
+        {
+          "id": "127.0.0.1:43123",
+          "result": {
+            "offsetSeconds": 0.0007207727758213878,
+            "delaySeconds": 0.00016189622692763805,
+            "serverTransmitUnix": 1789671823.389961,
+            "referenceUnix": 1789671821.9741874,
+            "precisionSeconds": 1.4901161193847656e-8,
+            "pollSeconds": 64,
+            "minimumErrorSeconds": 0.0006398246623575687,
+            "rootDistanceSeconds": 0.00008094811346381903,
+            "healthError": null,
+            "extensions": [],
+            "leap": 0,
+            "version": 4,
+            "mode": 4,
+            "stratum": 10,
+            "poll": 6,
+            "precision": -26,
+            "rootDelaySeconds": 0,
+            "rootDispersionSeconds": 0,
+            "referenceID": 2139029761,
+            "referenceString": "127.127.1.1",
+            "kissCode": "",
+            "receivedUnix": 1789671823.389321,
+            "elapsedSeconds": 0.0003210849999959464,
+            "server": "127.0.0.1",
+            "port": 43123,
+            "address": "127.0.0.1",
+            "family": 4,
+            "authenticated": true,
+            "authentication": {
+              "type": "AES128",
+              "keyID": 104
+            }
+          }
+        }
+      ],
+      "sources": [
+        {
+          "id": "127.0.0.1:43123",
+          "estimate": {
+            "offsetSeconds": 0.0007207727758213878,
+            "delaySeconds": 0.00016189622692763805,
+            "serverTransmitUnix": 1789671823.389961,
+            "referenceUnix": 1789671821.9741874,
+            "precisionSeconds": 1.4901161193847656e-8,
+            "pollSeconds": 64,
+            "minimumErrorSeconds": 0.0006398246623575687,
+            "rootDistanceSeconds": 0.00008094811346381903,
+            "healthError": null,
+            "extensions": [],
+            "leap": 0,
+            "version": 4,
+            "mode": 4,
+            "stratum": 10,
+            "poll": 6,
+            "precision": -26,
+            "rootDelaySeconds": 0,
+            "rootDispersionSeconds": 0,
+            "referenceID": 2139029761,
+            "referenceString": "127.127.1.1",
+            "kissCode": "",
+            "receivedUnix": 1789671823.389321,
+            "elapsedSeconds": 0.0003210849999959464,
+            "server": "127.0.0.1",
+            "port": 43123,
+            "address": "127.0.0.1",
+            "family": 4,
+            "authenticated": true,
+            "authentication": {
+              "type": "AES128",
+              "keyID": 104
+            }
+          },
+          "rootDistanceSeconds": 0.00008094811346381903,
+          "exclusion": null
+        }
+      ],
+      "consensus": null
+    }
+  ]
+}
