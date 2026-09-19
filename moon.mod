@@ -1,4 +1,4 @@
-name = "localreview/ntp"
+name = "xuting22/ntp"
 
 version = "0.4.0"
 
