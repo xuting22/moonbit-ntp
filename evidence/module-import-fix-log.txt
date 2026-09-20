@@ -1,0 +1,15 @@
+$ C:\Users\uiwcv\Documents\Codex\2026-09-10\ban\work\moon\bin\moon.exe info
+Finished. moon: ran 4 tasks, now up to date
+
+$ C:\Users\uiwcv\Documents\Codex\2026-09-10\ban\work\moon\bin\moon.exe check --deny-warn
+Finished. moon: ran 5 tasks, now up to date
+
+$ C:\Users\uiwcv\Documents\Codex\2026-09-10\ban\work\moon\bin\moon.exe build --target js --deny-warn
+Finished. moon: ran 5 tasks, now up to date
+
+$ C:\Users\uiwcv\Documents\Codex\2026-09-10\ban\work\moon\bin\moon.exe run cmd/main
+NTP request bytes: 48, era: 0
+Recovered Unix seconds: 1788998400.25
+
+$ node tools/test-demo.mjs
+ntp: standalone engine passed

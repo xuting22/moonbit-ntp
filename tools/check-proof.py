@@ -2,7 +2,7 @@
 import hashlib,json,subprocess
 from pathlib import Path
 root=Path(__file__).resolve().parents[1]
-record=json.loads((root/'evidence/sync-upgrade.json').read_text(encoding='utf8'))
+record=json.loads((root/'evidence/module-import-fix.json').read_text(encoding='utf8'))
 for section in ['sourceSHA256','evidenceSHA256']:
     for name,expected in record[section].items():
         data=subprocess.check_output(['git','show','HEAD:'+name],cwd=root)

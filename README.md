@@ -1,5 +1,7 @@
 # MoonBit NTP · 时间观测台
 
+> 2026-09-21 本地构建修复：命令包 import 已同步到当前 moon.mod 模块名；moon info/check、JS 构建、MoonBit 示例和 Node 引擎示例通过。算法未改，本轮未重跑历史全部行为/性能套件。当前提交指纹见 evidence/module-import-fix.json。
+
 本地版本 **0.4.0**。MoonBit 实现报文与时间戳计算、八级时钟过滤和多来源选择；Node 宿主提供带认证的 UDP 查询、连续采样和本地工作台。所有接口返回估计值，不修改系统时钟。
 
 ## 开始使用
