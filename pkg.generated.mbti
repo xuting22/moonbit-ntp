@@ -1,5 +1,5 @@
 // Generated using `moon info`, DON'T EDIT IT
-package "localreview/ntp"
+package "xuting22/ntp"
 
 import {
   "moonbitlang/core/debug",
