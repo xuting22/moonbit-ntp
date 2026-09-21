@@ -1,5 +1,13 @@
 # MoonBit NTP · 时间观测台
 
+## 获取与验证入口
+
+公开源码：[github.com/xuting22/moonbit-ntp](https://github.com/xuting22/moonbit-ntp)；MoonBit 模块名为 `xuting22/ntp`。
+
+从源码运行：`git clone https://github.com/xuting22/moonbit-ntp.git` 后进入该目录，按下文和 [TESTING.md](TESTING.md) 安装所需工具。仓库公开不等于已在 Mooncakes 发布，不承诺 `moon add` 当前可用。
+
+查看 [GitHub Actions](https://github.com/xuting22/moonbit-ntp/actions) 时请核对 run 的 commit SHA；历史 evidence、旧 ZIP 与本地测试不能替代当前提交的 CI 结果。下文保留各版本的验证范围和兼容性限制。
+
 本地版本 **0.4.0**。MoonBit 实现报文与时间戳计算、八级时钟过滤和多来源选择；Node 宿主提供带认证的 UDP 查询、连续采样和本地工作台。所有接口返回估计值，不修改系统时钟。
 
 ## 开始使用
@@ -62,4 +70,4 @@ Windows 完整检查：`./verify.ps1 [-MoonPath /absolute/path/to/moon.exe]`。�
 
 本项目依据 [RFC 5905](https://www.rfc-editor.org/rfc/rfc5905)、[RFC 7822](https://www.rfc-editor.org/rfc/rfc7822)、[RFC 8573](https://www.rfc-editor.org/rfc/rfc8573) 和 [已确认勘误 5600](https://errata.rfc-editor.org/eid5600/) 独立实现。没有复制 beevik 或 Chrony 实现源码。参考调用助手是本项目编写，使用官方公开 API；来源完整性见 `evidence/reference-provenance.json`。
 
-本目录为独立本地 Git 仓库，没有 remote、上传、公开发布或比赛提交。旧 ZIP/bundle 与旧批次目录保持历史状态；当前实现以本目录提交为准。MIT 适用于原创代码，第三方依赖保留各自许可证。
+> 历史开发记录（以下发布/归档状态不代表当前仓库；当前入口见文首）：本目录为独立本地 Git 仓库，没有 remote、上传、公开发布或比赛提交。旧 ZIP/bundle 与旧批次目录保持历史状态；当前实现以本目录提交为准。MIT 适用于原创代码，第三方依赖保留各自许可证。
