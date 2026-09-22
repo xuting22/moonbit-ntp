@@ -1,0 +1,1 @@
+{"ok":true,"value":{"offsetSeconds":0.02,"jitterSeconds":0.01584297951775486,"selectionJitterSeconds":0.015811388300841896,"intervalLow":-0.020000000000000004,"intervalHigh":0.060000000000000005,"systemPeer":"clock0","survivors":["clock0","clock1","clock2"],"rejected":["clock3"]}}

@@ -1,69 +1,63 @@
-> 2026-09-22 当前本地版 0.4.0：申报定位为“多来源 NTP 时钟健康观测”。已更新[现有项目对照](DUPLICATION.md)、[申报草稿](PROPOSAL.md)及[本轮验证](evidence/innovation-review-20260922/results.json)。下面带日期的旧轮次描述保留历史范围；团队已有公开仓库，本次本地修订尚未由本任务推送。
+# 多来源 NTP 时钟健康观测
 
-# MoonBit NTP · 时间观测台
+**本项目仓库：[https://github.com/xuting22/moonbit-ntp](https://github.com/xuting22/moonbit-ntp)**
 
-> 2026-09-21 本地构建修复：命令包 import 已同步到当前 moon.mod 模块名；moon info/check、JS 构建、MoonBit 示例和 Node 引擎示例通过。算法未改，本轮未重跑历史全部行为/性能套件。当前提交指纹见 evidence/module-import-fix.json。
+模块 `xuting22/ntp`，本地版本 **0.4.0**，MIT。当前评审状态：**保留候选**。本文件是当前入口，旧轮次说明与详细用法保存在 [历史/完整使用说明](README-BEFORE-VALUE-REWORK.md)。
 
-本地版本 **0.4.0**。MoonBit 实现报文与时间戳计算、八级时钟过滤和多来源选择；Node 宿主提供带认证的 UDP 查询、连续采样和本地工作台。所有接口返回估计值，不修改系统时钟。
+## 解决什么任务
 
-## 开始使用
+应用节点需要知道与时间源的偏差、往返延迟及不确定度，而无需本工具直接修改系统时钟。多源过滤可以暴露单个异常时间源。
 
-安装 Node.js 20 或更新版本，无需安装 MoonBit 即可运行随仓库提供的真实编译产物：
+需要应用层时钟健康指标、保留多源观测及不确定度时使用；不取代操作系统的 chronyd/NTS 校时。
 
-```sh
-node tools/serve.mjs 8775
-```
+## 直接复现
 
-打开 http://127.0.0.1:8775/web/ 。Windows 也可运行 `./start-review.ps1`。页面支持单次查询、实时采样、停止、认证文件、结果导出、离线合成示例与 Worker 报文检视。启动和打开页面不会自动查询时间服务器。
+安装 MoonBit 和 Node.js 24，在本仓库根目录运行：
 
 ```sh
-node tools/ntp.mjs query your-authorized-server.example --timeout 3000
-node tools/ntp.mjs sample server-a.example server-b.example server-c.example --minimum 3
-node tools/ntp.mjs decode --file sample.txt
-node tools/ntp.mjs --help
+moon build --target js
+node -e "require('node:fs').copyFileSync('_build/js/debug/build/cmd/web/web.js','web/engine.mjs')"
+node examples/run-use-case.mjs
 ```
 
-采样默认 8 轮、间隔 64 秒，遵守服务器公布的最短轮询间隔。初始过滤器含未知样本，因此早期不确定度较大，可能暂时没有共识。`--no-poll-wait` 仅用于获准的测试服务；KoD 退避仍然生效。
+流程：**多时间源估计的离线复核**。运行器创建新的系统临时目录，保留每一步的 stdout/stderr、产物及 `report.json`，打印实际目录；重复运行不会覆盖之前产物。它只执行仓库内的本地样例，不连接公网或发送消息。`report.json` 的 `expected` 是应观察的结果，实际结果在各步输出中；成功退出不替代内容核对。
 
-## 作为库使用
+输入性质：原创合成观测值；不连接公共时间源、不修改系统时钟。
 
-```js
-import {query} from './tools/udp-client.mjs';
-import {sampleServers} from './tools/sampler.mjs';
-const control = new AbortController();
-const result = await query('your-authorized-server.example', {
-  timeoutMs: 3000, version: 4, signal: control.signal,
-});
-console.log(result.offsetSeconds, result.delaySeconds);
-for await (const round of sampleServers(['server-a.example','server-b.example','server-c.example'], {
-  minimum: 3, signal: control.signal,
-})) console.log(round.consensus);
-// Call control.abort() to interrupt a pending query or poll wait.
-```
+应观察：保留约 10/20/30 ms 的一致来源，排除偏离 1 秒的 clock3；输出不确定度。
 
-MoonBit 公共 API、可执行示例分别见 [pkg.generated.mbti](pkg.generated.mbti) 和 [README.mbt.md](README.mbt.md)。旧 `tools/cli.mjs` 保留报文示例的参数、文件与 stdin 接口；新 `tools/ntp.mjs` 提供查询、采样、文件解析及 JSON 重放。
+具体命令和输入路径见 [使用任务](USE-CASE.md) 与 [机器可读流程](examples/use-case.json)。只把这个脚本当复现入口，不把通用运行器计作核心技术贡献。
 
-## 已验证的范围
+## 实现与已有项目的关系
 
-- JS、Wasm-GC 都运行官方参考数值回归和独立数学模型回归。
-- beevik/ntp 1.5.0 的 156 个官方执行结果：153 个在数值容差 1.5 µs 内一致，3 个字段级差异有记录，0 个未解释差异。
-- 独立 Chrony 4.8：16 项本机互通检查，涵盖 NTP 2/3/4、六种认证、带认证的未知扩展字段和错误密钥拒绝。
-- 24 条时钟过滤轨迹、1581 个操作及 192 个来源共识案例；宿主、CLI、HTTP、浏览器均有各自证据。
+MoonBit 负责报文/时间戳、八级过滤和多来源选择；Node 负责 UDP、认证 MAC 和采样调度。
 
-这些结果不等于完整 NTP daemon 兼容性或 UTC 精度证明。详见 [TESTING.md](TESTING.md)、[FEATURES.md](FEATURES.md)、[HOST.md](HOST.md) 和 [ROADMAP.md](ROADMAP.md)。
+本轮未找到同范围 MoonBit NTP/SNTP 包。贡献是观测接口和组合采样工作流，不是发明 NTP 或替代系统校时守护程序。
 
-## 构建与审查
+同类项目和检索边界见 [DUPLICATION](DUPLICATION.md)。查重用于避免错误的首创表述；关键词零结果不能证明生态空白，Node 宿主能力也不计为 MoonBit 原生 I/O。
+
+库使用从 [公共 API](pkg.generated.mbti) 和根包源码开始；可在本 checkout 的消费包中导入 `"xuting22/ntp"`。源码中的网络/文件宿主入口及完整参数仍见 [完整使用说明](README-BEFORE-VALUE-REWORK.md)。是否已发布到 Mooncakes 需另核实，本文不把 `moon add` 的下载成功作为已完成事项。
+
+## 验证与边界
+
+前一轮工程验证 8 组真实本机 UDP/MAC、多源异常钟剔除、KoD 和 CLI 检查通过，不连接公共 NTP 服务。
+
+[上一轮工程验证](evidence/innovation-review-20260922/results.json) 与 [本轮最小任务回执](evidence/value-rework-20260922/use-case.json) 分开。历史参考版本、golden 重放、本机 peer、真实第三方服务端和本次样例是不同证据，不能合并成“全部生产验证”。
+
+常规核心检查可运行 `moon check --target js`、`moon test --target js`、`moon test --target wasm-gc`。专项命令：
 
 ```sh
-moon fmt
-moon info
-moon test --target js --deny-warn
-moon test --target wasm-gc --deny-warn
-moon build --target js --deny-warn
+node tools/test-sync.mjs
 ```
 
-Windows 完整检查：`./verify.ps1 [-MoonPath /absolute/path/to/moon.exe]`。它重建网页引擎并执行本机检查，不需要公网时间服务。最终提交的证据可用 `python tools/check-proof.py` 验证 Git blob 哈希。参考比较可以完全离线重放。
+专项所需的参考环境和历史版本见原使用说明及 TESTING 文档；本轮回执只记录实际执行项，不声称上面所有参考服务在任意环境即装即跑。
 
-本项目依据 [RFC 5905](https://www.rfc-editor.org/rfc/rfc5905)、[RFC 7822](https://www.rfc-editor.org/rfc/rfc7822)、[RFC 8573](https://www.rfc-editor.org/rfc/rfc8573) 和 [已确认勘误 5600](https://errata.rfc-editor.org/eid5600/) 独立实现。没有复制 beevik 或 Chrony 实现源码。参考调用助手是本项目编写，使用官方公开 API；来源完整性见 `evidence/reference-provenance.json`。
+没有 NTS，不等同 chronyd；估计值会受网络不对称等影响。认证 MAC 的覆盖与系统时钟精度分开。
 
-本目录为独立本地 Git 仓库，没有 remote、上传、公开发布或比赛提交。旧 ZIP/bundle 与旧批次目录保持历史状态；当前实现以本目录提交为准。MIT 适用于原创代码，第三方依赖保留各自许可证。
+## 复审材料状态
+
+无生产精度或公共时间源稳定性承诺，网络不对称会影响结果。
+
+2026-09-22 匿名新克隆成功；默认分支 `main`，核验公开提交 `8bac5002d565d77aba8d68985fee402a62870714`。本轮源码修订仅在本地，尚未推送；此记录不证明当时报名表中的地址正确，也不证明新修订已上线。
+
+[申报草稿](PROPOSAL.md) 已压缩为 30 行以内，并单独标明本项目仓库；[复核说明](REVIEW-RESPONSE.md) 区分材料错误、功能变化及尚未解决的问题。没有编造用户、设备接入、生产部署或评审认可。

@@ -1,0 +1,36 @@
+[
+  {
+    "op": "combine",
+    "peers": [
+      {
+        "id": "clock0",
+        "offsetSeconds": 0.01,
+        "rootDistanceSeconds": 0.05,
+        "jitterSeconds": 0.001,
+        "stratum": 2
+      },
+      {
+        "id": "clock1",
+        "offsetSeconds": 0.02,
+        "rootDistanceSeconds": 0.05,
+        "jitterSeconds": 0.001,
+        "stratum": 2
+      },
+      {
+        "id": "clock2",
+        "offsetSeconds": 0.03,
+        "rootDistanceSeconds": 0.05,
+        "jitterSeconds": 0.001,
+        "stratum": 2
+      },
+      {
+        "id": "clock3",
+        "offsetSeconds": 1,
+        "rootDistanceSeconds": 0.05,
+        "jitterSeconds": 0.001,
+        "stratum": 2
+      }
+    ],
+    "minimum": 3
+  }
+]

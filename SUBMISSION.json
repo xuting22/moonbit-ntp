@@ -1,0 +1,17 @@
+{
+  "project": "ntp",
+  "title": "多来源 NTP 时钟健康观测",
+  "module": "xuting22/ntp",
+  "version": "0.4.0",
+  "repository": "https://github.com/xuting22/moonbit-ntp",
+  "status": "保留候选",
+  "remainingRisk": "无生产精度或公共时间源稳定性承诺，网络不对称会影响结果。",
+  "actualUsersClaimed": false,
+  "anonymousCloneVerified": true,
+  "publicHead": "8bac5002d565d77aba8d68985fee402a62870714",
+  "defaultBranch": "origin/main",
+  "localChangesPublished": false,
+  "proposalLines": 25,
+  "useCase": "多时间源估计的离线复核",
+  "diff": "本轮未找到同范围 MoonBit NTP/SNTP 包。贡献是观测接口和组合采样工作流，不是发明 NTP 或替代系统校时守护程序。"
+}

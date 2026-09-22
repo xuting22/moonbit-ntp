@@ -1,0 +1,15 @@
+{
+  "title": "多时间源估计的离线复核",
+  "scope": "原创合成观测值；不连接公共时间源、不修改系统时钟。",
+  "steps": [
+    {
+      "args": [
+        "tools/ntp.mjs",
+        "replay",
+        "--file",
+        "examples/use-case/peers.json"
+      ]
+    }
+  ],
+  "expected": "保留约 10/20/30 ms 的一致来源，排除偏离 1 秒的 clock3；输出不确定度。"
+}
