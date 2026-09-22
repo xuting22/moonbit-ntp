@@ -1,0 +1,56 @@
+{
+  "date": "2026-09-22",
+  "project": "ntp",
+  "package": "xuting22/ntp",
+  "version": "0.4.0",
+  "code_base_commit_before_materials": "3e6c55d6df7cec5af9113deef14141b97a313921",
+  "core_checks": [
+    {
+      "command": [
+        "moon",
+        "test",
+        "--target",
+        "js"
+      ],
+      "exit": 0,
+      "seconds": 2.94,
+      "log": "ntp-test---target-js.log"
+    },
+    {
+      "command": [
+        "moon",
+        "test",
+        "--target",
+        "wasm-gc"
+      ],
+      "exit": 0,
+      "seconds": 2.6,
+      "log": "ntp-test---target-wasm-gc.log"
+    },
+    {
+      "command": [
+        "moon",
+        "build",
+        "--target",
+        "js"
+      ],
+      "exit": 0,
+      "seconds": 1.4,
+      "log": "ntp-build---target-js.log"
+    }
+  ],
+  "workflow_checks": [
+    {
+      "command": [
+        "node",
+        "tools/test-sync.mjs"
+      ],
+      "exit": 0,
+      "seconds": 2.9,
+      "log": "ntp-workflow-0.log"
+    }
+  ],
+  "interpretation": "本轮 8 组真实本机 UDP/MAC、多源异常钟剔除、KoD 和 CLI 检查通过，不连接公共 NTP 服务。",
+  "limit": "没有 NTS，不等同 chronyd；估计值会受网络不对称等影响。认证 MAC 的覆盖与系统时钟精度分开。",
+  "remote_push_performed": false
+}
